@@ -34,12 +34,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="C9d-ec-bZb">
-                                <rect key="frame" x="40" y="683" width="334" height="90"/>
+                                <rect key="frame" x="40" y="665.5" width="334" height="107.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgK-bs-gts">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="ynJ-Ml-hF4"/>
+                                            <constraint firstAttribute="height" constant="50" id="ynJ-Ml-hF4"/>
                                         </constraints>
                                         <state key="normal" title="Ingresar"/>
                                         <connections>
@@ -47,7 +47,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Zq-Kd-HWY">
-                                        <rect key="frame" x="0.0" y="60" width="334" height="30"/>
+                                        <rect key="frame" x="0.0" y="70" width="334" height="37.5"/>
                                         <state key="normal" title="Registrar"/>
                                         <connections>
                                             <segue destination="tSZ-b1-OHa" kind="show" id="odZ-xv-Tpi"/>
@@ -107,7 +107,7 @@
                                         </constraints>
                                         <state key="normal" title="Ingresar"/>
                                         <connections>
-                                            <segue destination="NAi-Kq-nC1" kind="show" id="YRb-bm-jH8"/>
+                                            <action selector="buttonLogin:" destination="bef-LI-0Rq" eventType="touchUpInside" id="Gzc-Og-fjq"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noH-07-DJM">
@@ -131,6 +131,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BB8-ch-rPf"/>
+                    <connections>
+                        <outlet property="labelError" destination="noH-07-DJM" id="Q3m-Yf-xic"/>
+                        <outlet property="textFieldEmail" destination="a7P-R8-g66" id="hkr-V4-Esk"/>
+                        <outlet property="textFieldPassword" destination="Fdw-80-nTF" id="Imb-UO-20t"/>
+                        <outletCollection property="allTextFields" destination="a7P-R8-g66" collectionClass="NSMutableArray" id="6MT-fc-7Vj"/>
+                        <outletCollection property="allTextFields" destination="Fdw-80-nTF" collectionClass="NSMutableArray" id="FyF-Yu-NIE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bHe-zu-ke6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
