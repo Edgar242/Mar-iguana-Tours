@@ -28,7 +28,7 @@
         <!--Mi perfil-->
         <scene sceneID="EDw-fg-Gx3">
             <objects>
-                <viewController id="jQX-MK-JtT" sceneMemberID="viewController">
+                <viewController id="jQX-MK-JtT" customClass="ViewControllerSignOptions" customModule="Mar_iguana_Tours" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a7d-pE-MNg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,7 +110,7 @@
                                             <action selector="buttonLogin:" destination="bef-LI-0Rq" eventType="touchUpInside" id="Gzc-Og-fjq"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noH-07-DJM">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noH-07-DJM">
                                         <rect key="frame" x="0.0" y="180" width="334" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="w9g-ei-O7U"/>
@@ -162,7 +162,7 @@
         <!--View Controller Profile-->
         <scene sceneID="qQy-aJ-mVf">
             <objects>
-                <viewController storyboardIdentifier="ViewControllerProfile" id="NAi-Kq-nC1" customClass="ViewControllerProfile" customModule="Mar_iguana_Tours" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewControllerUserProfile" id="NAi-Kq-nC1" customClass="ViewControllerProfile" customModule="Mar_iguana_Tours" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bqT-aV-H27">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
