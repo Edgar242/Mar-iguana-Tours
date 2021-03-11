@@ -24,25 +24,35 @@ class TableTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
 
+    var viajes: [Viaje] = [Viaje(titulo:"Gran Aventura en Guanajuato", fecha_inicio:"13 feb", fecha_fin:"18 feb", precio:500, foto_nombre:"guanajuato", valoracion:4),
+        Viaje(titulo:"El Nevado de Toluca", fecha_inicio:"11 mar", fecha_fin:"15 mar", precio:700, foto_nombre:"nevado", valoracion:4),
+        Viaje(titulo:"Semana en Cancún", fecha_inicio:"10 may", fecha_fin:"18 may", precio:2900, foto_nombre:"cancun", valoracion:4)
+        
+    ]
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
+       
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return viajes.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
 
-        // Configure the cell...
-
+        cell.travelTitle.text = viajes[indexPath.row].titulo
+        cell.travelPrice.text = "$" + String(viajes[indexPath.row].precio)
+        cell.travelSchedule.text = "Del "+viajes[indexPath.row].fecha_inicio + " al " + viajes[indexPath.row].fecha_fin
+        cell.travelImage.image = UIImage(named: viajes[indexPath.row].foto_nombre)
         return cell
     }
 
