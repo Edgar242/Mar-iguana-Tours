@@ -34,20 +34,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="C9d-ec-bZb">
-                                <rect key="frame" x="40" y="665.5" width="334" height="107.5"/>
+                                <rect key="frame" x="40" y="653" width="334" height="120"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgK-bs-gts">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="ynJ-Ml-hF4"/>
+                                            <constraint firstAttribute="height" constant="50" id="sdX-72-XCm"/>
                                         </constraints>
                                         <state key="normal" title="Ingresar"/>
                                         <connections>
                                             <segue destination="bef-LI-0Rq" kind="show" id="cfe-tw-X4B"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Zq-Kd-HWY">
-                                        <rect key="frame" x="0.0" y="70" width="334" height="37.5"/>
+                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Zq-Kd-HWY">
+                                        <rect key="frame" x="0.0" y="70" width="334" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="G4a-s0-USm"/>
+                                        </constraints>
                                         <state key="normal" title="Registrar"/>
                                         <connections>
                                             <segue destination="tSZ-b1-OHa" kind="show" id="odZ-xv-Tpi"/>
@@ -55,7 +60,7 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="1Zq-Kd-HWY" firstAttribute="height" secondItem="DgK-bs-gts" secondAttribute="height" multiplier="0.75" id="sHR-uS-6OM"/>
+                                    <constraint firstItem="1Zq-Kd-HWY" firstAttribute="height" secondItem="DgK-bs-gts" secondAttribute="height" id="5yW-dA-WbS"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -162,7 +167,7 @@
         <!--View Controller Profile-->
         <scene sceneID="qQy-aJ-mVf">
             <objects>
-                <viewController storyboardIdentifier="ViewControllerUserProfile" id="NAi-Kq-nC1" customClass="ViewControllerProfile" customModule="Mar_iguana_Tours" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewControllerProfile" id="NAi-Kq-nC1" customClass="ViewControllerProfile" customModule="Mar_iguana_Tours" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bqT-aV-H27">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

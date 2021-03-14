@@ -9,6 +9,6 @@ import Foundation
 
 struct Constants {
     struct Storyboard {
-        static let viewControllerUserProfile = "ViewControllerUserProfile"
+        static let viewControllerProfile = "ViewControllerProfile"
     }
 }

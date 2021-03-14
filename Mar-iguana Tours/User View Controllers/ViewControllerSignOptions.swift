@@ -21,25 +21,26 @@ class ViewControllerSignOptions: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         //super.viewWillAppear(animated)
-        let userIsLogged = true
-        if userIsLogged {
+
+        // TODO: Check if user is logged in via plist
+        let userIsLoggedIn = false
+        if userIsLoggedIn {
             self.transitionToUserProfile()
+            return
         }
-        
         setupVideo()
     }
     
     func transitionToUserProfile() {
-        print("Transition to UserProfile view Controller")
-        //let result = storyboard?.instantiateViewController(identifier: Constants.Storyboard.viewControllerUserProfile) as? ViewControllerSignOptions
-        
-        //view.window?.rootViewController = result
-        //view.window?.makeKeyAndVisible()
-        
+      
         let storyBoardMain = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyBoardMain.instantiateViewController(identifier: Constants.Storyboard.viewControllerUserProfile)
+        let viewController = storyBoardMain.instantiateViewController(identifier: Constants.Storyboard.viewControllerProfile) //as! ViewControllerUserProfile
         view.window?.rootViewController = viewController
         
+        // This code does not work
+        //present(viewController, animated: true, completion: nil)
+        
+        show(viewController, sender: nil)
     }
     
     func setupVideo() {
@@ -58,16 +59,10 @@ class ViewControllerSignOptions: UIViewController {
          
         // Create the player
         videoPlayer = AVPlayer(playerItem: item)
-        
         videoPlayerLayer = AVPlayerLayer(player: videoPlayer!)
-        
         videoPlayerLayer?.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width*4.1, height: self.view.frame.size.height)
-               
         view.layer.insertSublayer(videoPlayerLayer!, at: 0)
-        
         videoPlayer?.playImmediately(atRate: 0.5)
-        
-        
     }
     
 
