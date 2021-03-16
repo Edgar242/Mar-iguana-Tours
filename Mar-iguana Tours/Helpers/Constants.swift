@@ -11,4 +11,6 @@ struct Constants {
     struct Storyboard {
         static let viewControllerProfile = "ViewControllerProfile"
     }
+    
+    static let cadenaVacia:String = ""
 }
