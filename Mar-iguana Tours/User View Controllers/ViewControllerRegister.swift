@@ -52,13 +52,6 @@ class ViewControllerRegister: UIViewController {
     
     //Habilita o deshabilita el boton
     @objc func habilitaBoton () {
-        print("Entra a validar campos")
-        print(nombreTextField.hasError)
-        print(apellidosTextField.hasError)
-        print(emailTextField.hasError)
-        print(telefonoTextFiled.hasError)
-        print(passwdTextField.hasError)
-        
         if(!nombreTextField.hasError && !apellidosTextField.hasError && !emailTextField.hasError && !telefonoTextFiled.hasError && !passwdTextField.hasError){
             FormatUtils.formatButtonEnabled(button: registroButton)
         }
