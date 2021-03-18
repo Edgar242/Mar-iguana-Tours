@@ -84,8 +84,11 @@ class ViewControllerRegister: UIViewController {
         
     //Funcion que ajusta el scroll cuando el teclado desaparece
     @objc func tecladoDesaparece (notificacion: Notification) {
-        print ("el teclado se fue")
+        if !tecladoArriba {
+            return
+        }
         tecladoArriba = false
+        print ("el teclado se fue")
         
         // Obtenemos el tamaño final del teclado
         if let tamanioTeclado = (notificacion.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
