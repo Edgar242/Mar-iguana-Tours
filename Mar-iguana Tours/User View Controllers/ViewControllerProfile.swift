@@ -28,6 +28,12 @@ class ViewControllerProfile: UIViewController {
     var fechaNacPropertie:String = ""
     var passwdPropertie:String = ""
     
+    @IBAction func onLogOut(_ sender: UIButton) {
+        let storyBoardMain = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyBoardMain.instantiateViewController(identifier: Constants.Storyboard.viewControllerLoginOrRegister)
+        navigationController?.setViewControllers([viewController], animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
