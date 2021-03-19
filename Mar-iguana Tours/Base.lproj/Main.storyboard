@@ -252,6 +252,9 @@
                                                 <state key="normal" title="REGISTRAR">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onRegister:" destination="tSZ-b1-OHa" eventType="touchUpInside" id="Xw3-2f-lxR"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

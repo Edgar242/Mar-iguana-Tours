@@ -27,6 +27,12 @@ class ViewControllerRegister: UIViewController {
         view.endEditing(true)
     }
     
+    @IBAction func onRegister(_ sender: UIButton) {
+        let storyBoardMain = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyBoardMain.instantiateViewController(identifier: Constants.Storyboard.viewControllerProfile)
+        navigationController?.setViewControllers([viewController], animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -97,6 +103,7 @@ class ViewControllerRegister: UIViewController {
         }
     }
     
+    // Load this data from userDefaults, plist or JSON file in order
     //Manda los datos a siguiente vista
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
