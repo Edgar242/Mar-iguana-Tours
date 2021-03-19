@@ -17,16 +17,18 @@ class NavigationControllerProfile: UINavigationController {
         // TODO: Check if user is logged in via JSON file
         let userIsLoggedIn = true
         if userIsLoggedIn {
-            loadView(Constants.Storyboard.viewControllerProfile)
+            // Skip login or resgistration and go to user Profile
+            switchView(Constants.Storyboard.viewControllerProfile)
         } else {
-            loadView(Constants.Storyboard.navControllerProfile)
+            switchView(Constants.Storyboard.viewControllerLoginOrRegister)
         }
     }
     
-    func loadView(_ identifier: String) {
+    func switchView(_ identifier: String) {
         let storyBoardMain = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyBoardMain.instantiateViewController(identifier: identifier)
+        let viewController = storyBoardMain.instantiateViewController(withIdentifier: identifier)
         navigationController?.setViewControllers([viewController], animated: true)
+        navigationController?.isNavigationBarHidden = false
     }
 
     /*
