@@ -14,8 +14,21 @@ class ViewControllerLogin: UIViewController {
     @IBOutlet var allTextFields: [UITextField]!
     @IBOutlet weak var labelError: UILabel!
     
-    @IBAction func buttonLogin(_ sender: UIButton) {
-        _ = validateFields()
+    @IBOutlet weak var buttonLogin: UIButton!
+    
+    @IBAction func onLogin(_ sender: UIButton) {
+        // Go to profile controller
+    }
+    
+    // Detects when the user tap (pressed) on the view
+    @IBAction func onTapView(){
+        view.endEditing(true)
+        
+        // Enable Login button if the text fields are valid
+        // TODO: Check if email and password is valid
+        if validateFields() {
+            FormatUtils.formatButtonEnabled(button: buttonLogin)
+        }
     }
     
     
@@ -27,10 +40,13 @@ class ViewControllerLogin: UIViewController {
     }
     
     func setupElements() {
-        
+        // Clear text fields
+        textFieldEmail.text = ""
+        textFieldPassword.text = ""
         labelError.alpha = 0
         
-        // Load text styles from Utilities
+        // Load text styles
+        FormatUtils.formatButtonDisabled(button: buttonLogin)        
     }
     
     func validateFields() -> Bool {

@@ -110,9 +110,9 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="zce-Py-Rm6"/>
                                         </constraints>
-                                        <state key="normal" title="Ingresar"/>
+                                        <state key="normal" title="INICIAR SESIÓN"/>
                                         <connections>
-                                            <action selector="buttonLogin:" destination="bef-LI-0Rq" eventType="touchUpInside" id="Gzc-Og-fjq"/>
+                                            <action selector="onLogin:" destination="bef-LI-0Rq" eventType="touchUpInside" id="Gzc-Og-fjq"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noH-07-DJM">
@@ -125,18 +125,24 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <gestureRecognizers/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lAh-tz-jAT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ubE-oy-GEe" firstAttribute="leading" secondItem="lAh-tz-jAT" secondAttribute="leading" constant="40" id="byS-Kn-0QJ"/>
                             <constraint firstItem="ubE-oy-GEe" firstAttribute="top" secondItem="lAh-tz-jAT" secondAttribute="top" constant="40" id="mam-Px-3jg"/>
                             <constraint firstItem="lAh-tz-jAT" firstAttribute="trailing" secondItem="ubE-oy-GEe" secondAttribute="trailing" constant="40" id="rft-cH-0Up"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="4Ri-fZ-eVb" appends="YES" id="ReO-3g-NyR"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="BB8-ch-rPf"/>
                     <connections>
+                        <outlet property="buttonLogin" destination="MPJ-oI-Z1N" id="fak-27-PgR"/>
                         <outlet property="labelError" destination="noH-07-DJM" id="Q3m-Yf-xic"/>
                         <outlet property="textFieldEmail" destination="a7P-R8-g66" id="hkr-V4-Esk"/>
                         <outlet property="textFieldPassword" destination="Fdw-80-nTF" id="Imb-UO-20t"/>
@@ -145,6 +151,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bHe-zu-ke6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="4Ri-fZ-eVb">
+                    <connections>
+                        <action selector="onTapView" destination="bef-LI-0Rq" id="8Pp-2u-2gr"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2884" y="755"/>
         </scene>
