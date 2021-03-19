@@ -28,13 +28,13 @@
         <!--Mi perfil-->
         <scene sceneID="EDw-fg-Gx3">
             <objects>
-                <viewController id="jQX-MK-JtT" customClass="ViewControllerSignOptions" customModule="Mar_iguana_Tours" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NavigationControllerProfile" id="jQX-MK-JtT" customClass="ViewControllerSignOptions" customModule="Mar_iguana_Tours" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a7d-pE-MNg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="C9d-ec-bZb">
-                                <rect key="frame" x="40" y="653" width="334" height="120"/>
+                                <rect key="frame" x="40" y="702" width="334" height="120"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgK-bs-gts">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -76,18 +76,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIF-Is-IPu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2723" y="1081"/>
+            <point key="canvasLocation" x="3631.884057971015" y="1080.8035714285713"/>
         </scene>
         <!--View Controller Login-->
         <scene sceneID="74V-m9-Wdc">
             <objects>
                 <viewController id="bef-LI-0Rq" customClass="ViewControllerLogin" customModule="Mar_iguana_Tours" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qKt-YN-ibn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ubE-oy-GEe">
-                                <rect key="frame" x="40" y="128" width="334" height="220"/>
+                                <rect key="frame" x="40" y="40" width="334" height="220"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a7P-R8-g66">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
@@ -157,41 +157,39 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3580" y="762"/>
+            <point key="canvasLocation" x="4489.855072463768" y="761.38392857142856"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="mUD-FY-DUW">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Yxr-DX-Sed" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController storyboardIdentifier="NavigationControllerProfile" id="lsf-Vt-AFa" sceneMemberID="viewController">
+                <navigationController id="lsf-Vt-AFa" customClass="NavigationControllerProfile" customModule="Mar_iguana_Tours" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="pmh-6P-9nJ"/>
                     <navigationItem key="navigationItem" id="pTO-v7-lYS"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4R2-Fq-Wuo">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="jQX-MK-JtT" kind="relationship" relationship="rootViewController" id="Jd2-AB-OFP"/>
-                    </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yxr-DX-Sed" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1974" y="1081"/>
+            <point key="canvasLocation" x="2264" y="1081"/>
         </scene>
-        <!--View Controller Register-->
+        <!--Registro-->
         <scene sceneID="MSp-MQ-4JG">
             <objects>
                 <viewController id="tSZ-b1-OHa" customClass="ViewControllerRegister" customModule="Mar_iguana_Tours" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yc4-Zi-QrO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="hfi-H0-gvR">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <items>
                                     <navigationItem title="Registro" id="AMf-p6-T75"/>
                                 </items>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOn-kP-JHN">
-                                <rect key="frame" x="40" y="162" width="334" height="631"/>
+                                <rect key="frame" x="40" y="86" width="334" height="702"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="sAp-5t-qnp">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="537"/>
@@ -254,9 +252,6 @@
                                                 <state key="normal" title="REGISTRAR">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <connections>
-                                                    <segue destination="NAi-Kq-nC1" kind="show" identifier="toProfileSegue" id="jjW-JM-Fwc"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -288,7 +283,7 @@
                             <outletCollection property="gestureRecognizers" destination="uoi-7c-Qum" appends="YES" id="7of-DD-g93"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="wkZ-YN-xEb"/>
+                    <navigationItem key="navigationItem" title="Registro" id="wkZ-YN-xEb"/>
                     <connections>
                         <outlet property="apellidosTextField" destination="RU0-UF-gWs" id="hW2-FA-30u"/>
                         <outlet property="emailTextField" destination="Oty-t9-gym" id="Mu1-uf-IYg"/>
@@ -307,7 +302,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3580" y="1427"/>
+            <point key="canvasLocation" x="4489.855072463768" y="1426.3392857142856"/>
         </scene>
         <!--View Controller Profile-->
         <scene sceneID="qQy-aJ-mVf">
@@ -318,86 +313,86 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3fF-bK-kdH">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Perfil" id="dXR-a2-JMA"/>
                                 </items>
                             </navigationBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tHG-lU-m2Y">
-                                <rect key="frame" x="30" y="157" width="100" height="100"/>
+                                <rect key="frame" x="30" y="113" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="NDi-2v-sjt"/>
                                     <constraint firstAttribute="height" constant="100" id="woJ-xu-til"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPb-Yo-5SQ">
-                                <rect key="frame" x="150" y="202" width="234" height="20.5"/>
+                                <rect key="frame" x="150" y="158" width="234" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número de teléfono" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wkg-Cf-OOT">
-                                <rect key="frame" x="30" y="352" width="354" height="17"/>
+                                <rect key="frame" x="30" y="308" width="354" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fej-5t-bgU">
-                                <rect key="frame" x="30" y="379" width="354" height="18"/>
+                                <rect key="frame" x="30" y="335" width="354" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo electrónico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4K-K5-btV">
-                                <rect key="frame" x="30" y="282" width="354" height="17"/>
+                                <rect key="frame" x="30" y="238" width="354" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7GZ-mk-DSN">
-                                <rect key="frame" x="30" y="309" width="354" height="18"/>
+                                <rect key="frame" x="30" y="265" width="354" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sexo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRY-4P-tdm">
-                                <rect key="frame" x="30" y="492" width="354" height="17"/>
+                                <rect key="frame" x="30" y="448" width="354" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bvc-DR-oja">
-                                <rect key="frame" x="30" y="519" width="354" height="18"/>
+                                <rect key="frame" x="30" y="475" width="354" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha de nacimiento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ew0-9n-5Th">
-                                <rect key="frame" x="30" y="422" width="354" height="17"/>
+                                <rect key="frame" x="30" y="378" width="354" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5UZ-KT-Lmu">
-                                <rect key="frame" x="30" y="449" width="354" height="18"/>
+                                <rect key="frame" x="30" y="405" width="354" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wob-Jd-Vsv">
-                                <rect key="frame" x="30" y="562" width="354" height="17"/>
+                                <rect key="frame" x="30" y="518" width="354" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4W8-vx-8nZ">
-                                <rect key="frame" x="30" y="589" width="354" height="18"/>
+                                <rect key="frame" x="30" y="545" width="354" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NW3-kF-W5L">
-                                <rect key="frame" x="30" y="637" width="354" height="30"/>
+                                <rect key="frame" x="30" y="593" width="354" height="30"/>
                                 <state key="normal" title="CERRAR SESIÓN"/>
                             </button>
                         </subviews>
@@ -462,7 +457,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9O-Cv-vbl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4471" y="1797"/>
+            <point key="canvasLocation" x="3632" y="1822"/>
         </scene>
         <!--Explorar-->
         <scene sceneID="v1z-ag-24M">
@@ -502,7 +497,7 @@
         <!--Perfil-->
         <scene sceneID="CNh-kV-Mz4">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="V4q-Kg-uK8" customClass="NavigationControllerProfile" customModule="Mar_iguana_Tours" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="V4q-Kg-uK8" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Perfil" image="person.fill" catalog="system" id="jMW-1G-88z"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IPz-7a-AHu">
@@ -513,7 +508,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="lsf-Vt-AFa" kind="relationship" relationship="rootViewController" id="ZhB-m3-ePv"/>
+                        <segue destination="lsf-Vt-AFa" kind="relationship" relationship="rootViewController" id="j3m-1w-cve"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zD9-Pk-84d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -525,23 +520,23 @@
             <objects>
                 <viewController id="ipX-gL-O1G" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QdQ-Sb-V43">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Cf-yM-oRi">
-                                <rect key="frame" x="40" y="118" width="334" height="683"/>
+                                <rect key="frame" x="20" y="30" width="374" height="766"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bjW-AR-U8v">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="345"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="345"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Términos y condiciones" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rI5-L9-kpg">
-                                                <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K17-mV-sBn">
-                                                <rect key="frame" x="0.0" y="40.5" width="334" height="183"/>
+                                                <rect key="frame" x="0.0" y="40.5" width="374" height="183"/>
                                                 <attributedString key="attributedText">
                                                     <fragment>
                                                         <string key="content">Con la descarga de esta aplicación móvil de ahora en adelante llamada "App" usted acepta y autoriza que Mar-Iguana Tours utilice sus datos para calidad en el servicio y ofrecer el mejor contenido a sus usuarios.
@@ -557,13 +552,13 @@ El usuario acepta recibir notificaciones de publicidad de viajes con ofertas y p
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aviso de privacidad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkh-I9-LJn">
-                                                <rect key="frame" x="0.0" y="243.5" width="334" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="243.5" width="374" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1y5-V7-mEu">
-                                                <rect key="frame" x="0.0" y="284" width="334" height="61"/>
+                                                <rect key="frame" x="0.0" y="284" width="374" height="61"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Los datos del usuario serán resguardados apropiadamente y no serán compartidos con ningún tercero.">
                                                         <attributes>
@@ -591,16 +586,16 @@ El usuario acepta recibir notificaciones de publicidad de viajes con ofertas y p
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="4Cf-yM-oRi" firstAttribute="top" secondItem="PAz-cM-8u9" secondAttribute="top" constant="30" id="ItX-zP-vz8"/>
-                            <constraint firstItem="PAz-cM-8u9" firstAttribute="trailing" secondItem="4Cf-yM-oRi" secondAttribute="trailing" constant="40" id="Jyf-8d-gP3"/>
+                            <constraint firstItem="PAz-cM-8u9" firstAttribute="trailing" secondItem="4Cf-yM-oRi" secondAttribute="trailing" constant="20" id="Jyf-8d-gP3"/>
                             <constraint firstItem="PAz-cM-8u9" firstAttribute="bottom" secondItem="4Cf-yM-oRi" secondAttribute="bottomMargin" constant="20" id="Zk0-2U-zb0"/>
-                            <constraint firstItem="4Cf-yM-oRi" firstAttribute="leading" secondItem="PAz-cM-8u9" secondAttribute="leading" constant="40" id="jHM-Vq-ozi"/>
+                            <constraint firstItem="4Cf-yM-oRi" firstAttribute="leading" secondItem="PAz-cM-8u9" secondAttribute="leading" constant="20" id="jHM-Vq-ozi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="For-mT-hxl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N3p-mI-iO4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4471" y="1132"/>
+            <point key="canvasLocation" x="5328" y="1434"/>
         </scene>
     </scenes>
     <resources>

@@ -9,15 +9,18 @@ import UIKit
 
 class ViewControllerLogin: UIViewController {
 
-    @IBOutlet weak var textFieldEmail: UITextField!
-    @IBOutlet weak var textFieldPassword: UITextField!
+    @IBOutlet weak var textFieldEmail: FloatinLabelInput!
+    @IBOutlet weak var textFieldPassword: FloatinLabelInput!
     @IBOutlet var allTextFields: [UITextField]!
     @IBOutlet weak var labelError: UILabel!
     
     @IBOutlet weak var buttonLogin: UIButton!
     
     @IBAction func onLogin(_ sender: UIButton) {
-        // Go to profile controller
+        // Go to user profile
+        let storyBoardMain = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyBoardMain.instantiateViewController(identifier: Constants.Storyboard.viewControllerProfile)
+        navigationController?.setViewControllers([viewController], animated: true)
     }
     
     // Detects when the user tap (pressed) on the view
@@ -46,7 +49,7 @@ class ViewControllerLogin: UIViewController {
         labelError.alpha = 0
         
         // Load text styles
-        FormatUtils.formatButtonDisabled(button: buttonLogin)        
+        FormatUtils.formatButtonDisabled(button: buttonLogin)
     }
     
     func validateFields() -> Bool {

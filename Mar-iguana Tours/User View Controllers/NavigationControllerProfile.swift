@@ -17,20 +17,16 @@ class NavigationControllerProfile: UINavigationController {
         // TODO: Check if user is logged in via JSON file
         let userIsLoggedIn = true
         if userIsLoggedIn {
-            loadViewController(identifier: Constants.Storyboard.viewControllerProfile)
-            return
+            loadView(Constants.Storyboard.viewControllerProfile)
         } else {
-            loadViewController(identifier: Constants.Storyboard.navControllerProfile)
-            return
+            loadView(Constants.Storyboard.navControllerProfile)
         }
     }
     
-    func loadViewController(identifier: String) {
+    func loadView(_ identifier: String) {
         let storyBoardMain = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyBoardMain.instantiateViewController(identifier: identifier)
-        view.window?.rootViewController = viewController
-        
-        show(viewController, sender: nil)
+        navigationController?.setViewControllers([viewController], animated: true)
     }
 
     /*

@@ -22,12 +22,12 @@ class ViewControllerSignOptions: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         //super.viewWillAppear(animated)
 
-        // TODO: Check if user is logged in via plist
-        let userIsLoggedIn = false
-        if userIsLoggedIn {
-            self.transitionToUserProfile()
-            return
-        }
+        
+//        let userIsLoggedIn = false
+//        if userIsLoggedIn {
+//            self.transitionToUserProfile()
+//            return
+//        }
 //        setupVideo()
     }
     
