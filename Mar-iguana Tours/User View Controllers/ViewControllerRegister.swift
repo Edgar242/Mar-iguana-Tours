@@ -28,11 +28,9 @@ class ViewControllerRegister: UIViewController {
     }
     
     @IBAction func onRegister(_ sender: UIButton) {
-        let storyBoardMain = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyBoardMain.instantiateViewController(identifier: Constants.Storyboard.viewControllerProfile)
-        navigationController?.setViewControllers([viewController], animated: true)
+        Utilities.switchRootController(navController: navigationController, Constants.Storyboard.vcProfile)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         

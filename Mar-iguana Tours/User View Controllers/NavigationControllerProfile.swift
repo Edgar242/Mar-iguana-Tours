@@ -15,20 +15,13 @@ class NavigationControllerProfile: UINavigationController {
         // Do any additional setup after loading the view.
         
         // TODO: Check if user is logged in via JSON file
-        let userIsLoggedIn = false
+        let userIsLoggedIn = true
         if userIsLoggedIn {
-            // Skip login or resgistration and go to user Profile
-            switchView(Constants.Storyboard.viewControllerProfile)
+            // If user is logged in then load its profile
+            Utilities.switchRootController(navController: self, Constants.Storyboard.vcProfile)
         } else {
-            switchView(Constants.Storyboard.viewControllerLoginOrRegister)
+            Utilities.switchRootController(navController: self, Constants.Storyboard.vcLoginOrRegister)
         }
-    }
-    
-    func switchView(_ identifier: String) {
-        let storyBoardMain = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyBoardMain.instantiateViewController(withIdentifier: identifier)
-        navigationController?.setViewControllers([viewController], animated: true)
-        navigationController?.isNavigationBarHidden = false
     }
 
     /*

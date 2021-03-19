@@ -9,8 +9,8 @@ import Foundation
 
 struct Constants {
     struct Storyboard {
-        static let viewControllerProfile = "ViewControllerProfile"
-        static let viewControllerLoginOrRegister = "LoginOrRegister"
+        static let vcProfile = "ViewControllerProfile"
+        static let vcLoginOrRegister = "LoginOrRegister"
     }
     
     static let cadenaVacia:String = ""

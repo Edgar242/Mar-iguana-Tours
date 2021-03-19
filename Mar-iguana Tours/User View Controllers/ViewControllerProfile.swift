@@ -29,9 +29,7 @@ class ViewControllerProfile: UIViewController {
     var passwdPropertie:String = ""
     
     @IBAction func onLogOut(_ sender: UIButton) {
-        let storyBoardMain = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyBoardMain.instantiateViewController(identifier: Constants.Storyboard.viewControllerLoginOrRegister)
-        navigationController?.setViewControllers([viewController], animated: true)
+        Utilities.switchRootController(navController: navigationController, Constants.Storyboard.vcLoginOrRegister)
     }
     
     override func viewDidLoad() {

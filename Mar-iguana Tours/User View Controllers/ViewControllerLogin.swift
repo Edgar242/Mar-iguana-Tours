@@ -18,9 +18,7 @@ class ViewControllerLogin: UIViewController {
     
     @IBAction func onLogin(_ sender: UIButton) {
         // Go to user profile
-        let storyBoardMain = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyBoardMain.instantiateViewController(identifier: Constants.Storyboard.viewControllerProfile)
-        navigationController?.setViewControllers([viewController], animated: true)
+        Utilities.switchRootController(navController: navigationController, Constants.Storyboard.vcProfile)
     }
     
     // Detects when the user tap (pressed) on the view
