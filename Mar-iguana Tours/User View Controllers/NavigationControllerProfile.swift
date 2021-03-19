@@ -15,7 +15,7 @@ class NavigationControllerProfile: UINavigationController {
         // Do any additional setup after loading the view.
         
         // TODO: Check if user is logged in via JSON file
-        let userIsLoggedIn = true
+        let userIsLoggedIn = false
         if userIsLoggedIn {
             // Skip login or resgistration and go to user Profile
             switchView(Constants.Storyboard.viewControllerProfile)

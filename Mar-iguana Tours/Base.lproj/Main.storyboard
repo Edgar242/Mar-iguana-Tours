@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="1203" y="422"/>
         </scene>
-        <!--Mi perfil-->
+        <!--Seleccione una opción-->
         <scene sceneID="EDw-fg-Gx3">
             <objects>
                 <viewController storyboardIdentifier="LoginOrRegister" id="jQX-MK-JtT" customClass="ViewControllerSignOptions" customModule="Mar_iguana_Tours" customModuleProvider="target" sceneMemberID="viewController">
@@ -72,7 +72,7 @@
                             <constraint firstItem="8QH-HD-wlp" firstAttribute="trailing" secondItem="C9d-ec-bZb" secondAttribute="trailing" constant="40" id="mtX-yL-TUY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Mi perfil" id="pMy-3H-v1w"/>
+                    <navigationItem key="navigationItem" title="Seleccione una opción" id="pMy-3H-v1w"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIF-Is-IPu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
