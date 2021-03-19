@@ -10,6 +10,7 @@ import Foundation
 struct Constants {
     struct Storyboard {
         static let viewControllerProfile = "ViewControllerProfile"
+        static let navControllerProfile = "NavigationControllerProfile"
     }
     
     static let cadenaVacia:String = ""
