@@ -28,7 +28,7 @@ class ViewControllerSignOptions: UIViewController {
             self.transitionToUserProfile()
             return
         }
-        setupVideo()
+//        setupVideo()
     }
     
     func transitionToUserProfile() {
