@@ -20,27 +20,9 @@ class ViewControllerSignOptions: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //super.viewWillAppear(animated)
+        super.viewWillAppear(animated)
 
-        
-//        let userIsLoggedIn = false
-//        if userIsLoggedIn {
-//            self.transitionToUserProfile()
-//            return
-//        }
 //        setupVideo()
-    }
-    
-    func transitionToUserProfile() {
-      
-        let storyBoardMain = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyBoardMain.instantiateViewController(identifier: Constants.Storyboard.viewControllerProfile) //as! ViewControllerUserProfile
-        view.window?.rootViewController = viewController
-        
-        // This code does not work
-        //present(viewController, animated: true, completion: nil)
-        
-        show(viewController, sender: nil)
     }
     
     func setupVideo() {
