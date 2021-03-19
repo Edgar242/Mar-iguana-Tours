@@ -304,22 +304,6 @@
             </objects>
             <point key="canvasLocation" x="4489.855072463768" y="1426.3392857142856"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="JmU-Mw-71T">
-            <objects>
-                <viewController id="utY-9i-dSb" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="EMq-VQ-voh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="3Gg-GF-LNh"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="9XJ-0C-Kw9"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VM0-oI-r8D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2729" y="1889"/>
-        </scene>
         <!--My profile-->
         <scene sceneID="qQy-aJ-mVf">
             <objects>
@@ -412,14 +396,6 @@
                                 <state key="normal" title="CERRAR SESIÓN"/>
                                 <connections>
                                     <action selector="onLogOut:" destination="NAi-Kq-nC1" eventType="touchUpInside" id="2tD-1A-2xd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpF-qL-3oY">
-                                <rect key="frame" x="244" y="120" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="utY-9i-dSb" kind="show" id="tZk-tL-pAD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -535,7 +511,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="lsf-Vt-AFa" kind="relationship" relationship="rootViewController" id="Pw5-IZ-nVo"/>
+                        <segue destination="lsf-Vt-AFa" kind="relationship" relationship="rootViewController" id="IPi-Wb-8HT"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zD9-Pk-84d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
