@@ -20,8 +20,6 @@ class ViewControllerRegister: UIViewController {
         
     @IBOutlet weak var registroButton: UIButton!
     
-    @IBOutlet weak var navBarRegistro: UINavigationBar!
-    
     //Cierra el teclado al hacer gesto tap en la vista
     @IBAction func tabEnVista(){
         view.endEditing(true)
@@ -34,7 +32,7 @@ class ViewControllerRegister: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        FormatUtils.formatNavBar(navBar: navBarRegistro)
+        FormatUtils.formatNavBar(navBar: navigationController!.navigationBar)
         
         //Especifica que tipo de dato se va a validar
         nombreTextField.tipoDato = ""
