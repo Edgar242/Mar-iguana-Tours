@@ -8,18 +8,7 @@
 import UIKit
 import Foundation
 
-class Utilities {
-    static let errorTextFieldEmpty = "Por favor llene todos los campos"
-    
-    static func validateTextField(_ textField: UITextField) -> String? {
-        // Check if is not empty
-        guard textField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" else {
-            return nil
-        }
-        
-        return errorTextFieldEmpty
-    }
-    
+class Utilities {    
     static func printDocumentsDir() {
         return print("Documents Directory: ", FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last ?? "Documents directory not Found!")
     }

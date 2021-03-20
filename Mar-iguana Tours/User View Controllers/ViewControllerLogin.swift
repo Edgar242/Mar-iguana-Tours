@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import AVKit
 
 class ViewControllerLogin: UIViewController {
+    
+    var videoPlayer: AVPlayer?
+    var videoPlayerLayer: AVPlayerLayer?
 
     @IBOutlet weak var textFieldEmail: FloatinLabelInput!
     @IBOutlet weak var textFieldPassword: FloatinLabelInput!
@@ -23,18 +27,17 @@ class ViewControllerLogin: UIViewController {
     // Detects when the user tap (pressed) on the view
     @IBAction func onTapView(){
         view.endEditing(true)
-        
-        // Enable Login button if the text fields are valid
-        // TODO: Check if email and password is valid
-        if validateFields() {
-            FormatUtils.formatButtonEnabled(button: buttonLogin)
-        }
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupElements()
+//        setupVideo()
+    }
+    
+    func setupElements() {
         // Clear text fields
         textFieldEmail.tipoDato = FloatinLabelInput.tipoEmail
         textFieldPassword.tipoDato = FloatinLabelInput.tipoPasswd
@@ -46,8 +49,26 @@ class ViewControllerLogin: UIViewController {
         textFieldPassword.addTarget(self, action: #selector(habilitaBoton), for: .editingDidEnd)
     }
     
-    func setupElements() {
-
+    func setupVideo() {
+        // Get the path to the resource in the bundle
+        let videoPath = Bundle.main.path(forResource: "Surf", ofType: "mp4")
+        guard videoPath != nil else {
+            return
+        }
+        
+        // Create a URL from path
+        let url = URL(fileURLWithPath: videoPath!)
+        
+        // Create the video player item
+        let item = AVPlayerItem(url: url)
+        
+         
+        // Create the player
+        videoPlayer = AVPlayer(playerItem: item)
+        videoPlayerLayer = AVPlayerLayer(player: videoPlayer!)
+        videoPlayerLayer?.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width*4.1, height: self.view.frame.size.height)
+        view.layer.insertSublayer(videoPlayerLayer!, at: 0)
+        videoPlayer?.playImmediately(atRate: 0.5)
     }
     
     @objc func habilitaBoton() {
@@ -56,19 +77,6 @@ class ViewControllerLogin: UIViewController {
         } else {
             FormatUtils.formatButtonEnabled(button: buttonLogin)
         }
-        
-    }
-    
-    
-    func validateFields() -> Bool {
-        for textField in allTextFields {
-            let error = Utilities.validateTextField(textField)
-            if error != nil {
-                // Display error message
-                return false
-            }
-        }
-        return true
     }
 
     /*
