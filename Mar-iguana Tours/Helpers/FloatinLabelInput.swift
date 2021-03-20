@@ -9,6 +9,11 @@ import UIKit
 
 class FloatinLabelInput: UITextField {
 
+    static let tipoNone = 0
+    static let tipoEmail = 1
+    static let tipoPhone = 2
+    static let tipoPasswd = 3
+    
     //Etiqueta nombre de campo
     var floatingLabel: UILabel = UILabel(frame: CGRect.zero) // Label
     
@@ -20,7 +25,7 @@ class FloatinLabelInput: UITextField {
     
     //Indica el tipo de dato a valida
     @IBInspectable
-    var tipoDato:String?
+    var tipoDato: Int = 0
     
     //place holder que se indicará en la parte superior del campo, si no se indica toma el que trae configurado
     @IBInspectable
@@ -67,7 +72,7 @@ class FloatinLabelInput: UITextField {
     
     //Agregar la etiqueta de error despues de hacer la validación de acuerdo al tipo de dato
     @objc func addErrorLbl() {
-        let mensaje = Validate.validateTextField(tipoDato: self.tipoDato ?? "", dato: self.text ?? "")
+        let mensaje = validateTextField(label: self)
         if mensaje != "" {
             self.errorLabel.alpha = 1
             self.errorLabel.font = UIFont.systemFont(ofSize: 13)
@@ -133,5 +138,37 @@ class FloatinLabelInput: UITextField {
         self.layer.borderColor = UIColor.lightGray.cgColor
         self.layer.cornerRadius = 5
         self.borderStyle = UITextField.BorderStyle.roundedRect
+    }
+    
+    //Valida una cadena de texto y devuelve el mensaje de error
+    func validateTextField(label: FloatinLabelInput) -> String{
+        let format = "SELF MATCHES %@"
+        var regex = "";
+        var errorMessage = "";
+        
+        switch label.tipoDato {
+        case FloatinLabelInput.tipoPhone:
+            regex = "[0-9]{10}"
+            errorMessage = "Introduce tu número a 10 dígitos"
+        case FloatinLabelInput.tipoEmail:
+            regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+            errorMessage = "Introduce una dirección válida"
+        case FloatinLabelInput.tipoPasswd:
+            if((label.text?.count ?? 0) < 8){
+                return "Longitud mínima de 8 caracteres"
+            }
+        default:
+            if label.text == "" {
+                return "Dato requerido"
+            }
+        }
+        
+        //Si especifica regex y pasa la validacion
+        // Clear the error message if passes the validation
+        if(!regex.isEmpty && NSPredicate(format: format, regex).evaluate(with: label.text)){
+            errorMessage = ""
+        }
+        
+        return errorMessage
     }
 }

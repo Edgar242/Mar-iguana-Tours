@@ -35,11 +35,11 @@ class ViewControllerRegister: UIViewController {
         FormatUtils.formatNavBar(navBar: navigationController!.navigationBar)
         
         //Especifica que tipo de dato se va a validar
-        nombreTextField.tipoDato = ""
-        apellidosTextField.tipoDato = ""
-        emailTextField.tipoDato = "email"
-        telefonoTextFiled.tipoDato = "phone"
-        passwdTextField.tipoDato = "passwd"
+        nombreTextField.tipoDato = FloatinLabelInput.tipoNone
+        apellidosTextField.tipoDato = FloatinLabelInput.tipoNone
+        emailTextField.tipoDato = FloatinLabelInput.tipoEmail
+        telefonoTextFiled.tipoDato = FloatinLabelInput.tipoPhone
+        passwdTextField.tipoDato = FloatinLabelInput.tipoPasswd
         
         //Inicia con botón deshabilitado        
         FormatUtils.formatButtonDisabled(button: registroButton)

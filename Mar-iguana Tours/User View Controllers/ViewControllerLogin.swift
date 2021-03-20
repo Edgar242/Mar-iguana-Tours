@@ -35,18 +35,30 @@ class ViewControllerLogin: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        setupElements()
-    }
-    
-    func setupElements() {
         // Clear text fields
-        textFieldEmail.text = ""
-        textFieldPassword.text = ""
+        textFieldEmail.tipoDato = FloatinLabelInput.tipoEmail
+        textFieldPassword.tipoDato = FloatinLabelInput.tipoPasswd
         
         // Load text styles
         FormatUtils.formatButtonDisabled(button: buttonLogin)
+        
+        textFieldEmail.addTarget(self, action: #selector(habilitaBoton), for: .editingDidEnd)
+        textFieldPassword.addTarget(self, action: #selector(habilitaBoton), for: .editingDidEnd)
     }
+    
+    func setupElements() {
+
+    }
+    
+    @objc func habilitaBoton() {
+        if !textFieldEmail.hasError && !textFieldPassword.hasError {
+            FormatUtils.formatButtonDisabled(button: buttonLogin)
+        } else {
+            FormatUtils.formatButtonEnabled(button: buttonLogin)
+        }
+        
+    }
+    
     
     func validateFields() -> Bool {
         for textField in allTextFields {
