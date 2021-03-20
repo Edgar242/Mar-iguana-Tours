@@ -12,7 +12,6 @@ class ViewControllerLogin: UIViewController {
     @IBOutlet weak var textFieldEmail: FloatinLabelInput!
     @IBOutlet weak var textFieldPassword: FloatinLabelInput!
     @IBOutlet var allTextFields: [UITextField]!
-    @IBOutlet weak var labelError: UILabel!
     
     @IBOutlet weak var buttonLogin: UIButton!
     
@@ -44,20 +43,16 @@ class ViewControllerLogin: UIViewController {
         // Clear text fields
         textFieldEmail.text = ""
         textFieldPassword.text = ""
-        labelError.alpha = 0
         
         // Load text styles
         FormatUtils.formatButtonDisabled(button: buttonLogin)
     }
     
     func validateFields() -> Bool {
-        labelError.alpha = 0
         for textField in allTextFields {
             let error = Utilities.validateTextField(textField)
             if error != nil {
                 // Display error message
-                labelError.alpha = 1.0
-                labelError.text = error
                 return false
             }
         }
