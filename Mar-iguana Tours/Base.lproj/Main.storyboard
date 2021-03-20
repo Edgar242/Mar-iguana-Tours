@@ -16,8 +16,21 @@
                     <view key="view" contentMode="scaleToFill" id="2nq-mx-eC0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Under construction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddS-TX-Hs5">
+                                <rect key="frame" x="20" y="84" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="8mi-oI-2dU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ddS-TX-Hs5" firstAttribute="top" secondItem="8mi-oI-2dU" secondAttribute="top" constant="40" id="NT6-fC-FYj"/>
+                            <constraint firstItem="ddS-TX-Hs5" firstAttribute="leading" secondItem="8mi-oI-2dU" secondAttribute="leading" constant="20" id="nPn-QB-Ln3"/>
+                            <constraint firstItem="8mi-oI-2dU" firstAttribute="trailing" secondItem="ddS-TX-Hs5" secondAttribute="trailing" constant="20" id="sQG-9m-hPE"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Mis viajes" image="map.fill" catalog="system" id="vL0-wh-Xuz"/>
                 </viewController>
@@ -25,69 +38,16 @@
             </objects>
             <point key="canvasLocation" x="1203" y="421"/>
         </scene>
-        <!--Seleccione una opción-->
-        <scene sceneID="EDw-fg-Gx3">
+        <!--Ingresar-->
+        <scene sceneID="74V-m9-Wdc">
             <objects>
-                <viewController storyboardIdentifier="LoginOrRegister" id="jQX-MK-JtT" customClass="ViewControllerSignOptions" customModule="Mar_iguana_Tours" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="a7d-pE-MNg">
+                <viewController storyboardIdentifier="LoginOrRegister" id="bef-LI-0Rq" customClass="ViewControllerLogin" customModule="Mar_iguana_Tours" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qKt-YN-ibn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="C9d-ec-bZb">
-                                <rect key="frame" x="40" y="702" width="334" height="120"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgK-bs-gts">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="sdX-72-XCm"/>
-                                        </constraints>
-                                        <state key="normal" title="Ingresar"/>
-                                        <connections>
-                                            <segue destination="bef-LI-0Rq" kind="show" id="cfe-tw-X4B"/>
-                                        </connections>
-                                    </button>
-                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Zq-Kd-HWY">
-                                        <rect key="frame" x="0.0" y="70" width="334" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="G4a-s0-USm"/>
-                                        </constraints>
-                                        <state key="normal" title="Registrar"/>
-                                        <connections>
-                                            <segue destination="tSZ-b1-OHa" kind="show" id="odZ-xv-Tpi"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="1Zq-Kd-HWY" firstAttribute="height" secondItem="DgK-bs-gts" secondAttribute="height" id="5yW-dA-WbS"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="8QH-HD-wlp"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="8QH-HD-wlp" firstAttribute="bottom" secondItem="C9d-ec-bZb" secondAttribute="bottom" constant="40" id="G6h-MZ-RIR"/>
-                            <constraint firstItem="C9d-ec-bZb" firstAttribute="leading" secondItem="8QH-HD-wlp" secondAttribute="leading" constant="40" id="L5G-PO-Slc"/>
-                            <constraint firstItem="8QH-HD-wlp" firstAttribute="trailing" secondItem="C9d-ec-bZb" secondAttribute="trailing" constant="40" id="mtX-yL-TUY"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Seleccione una opción" id="pMy-3H-v1w"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pIF-Is-IPu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3631.884057971015" y="1080.8035714285713"/>
-        </scene>
-        <!--View Controller Login-->
-        <scene sceneID="74V-m9-Wdc">
-            <objects>
-                <viewController id="bef-LI-0Rq" customClass="ViewControllerLogin" customModule="Mar_iguana_Tours" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qKt-YN-ibn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ubE-oy-GEe">
-                                <rect key="frame" x="40" y="40" width="334" height="220"/>
+                                <rect key="frame" x="40" y="84" width="334" height="250.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a7P-R8-g66">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
@@ -97,7 +57,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fdw-80-nTF">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fdw-80-nTF">
                                         <rect key="frame" x="0.0" y="60" width="334" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="i4c-In-bQA"/>
@@ -115,15 +75,19 @@
                                             <action selector="onLogin:" destination="bef-LI-0Rq" eventType="touchUpInside" id="Gzc-Og-fjq"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noH-07-DJM">
-                                        <rect key="frame" x="0.0" y="180" width="334" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="w9g-ei-O7U"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ó" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpj-yy-UZc">
+                                        <rect key="frame" x="0.0" y="180" width="334" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYK-RW-AeY">
+                                        <rect key="frame" x="0.0" y="220.5" width="334" height="30"/>
+                                        <state key="normal" title="Crear una cuenta"/>
+                                        <connections>
+                                            <segue destination="tSZ-b1-OHa" kind="show" id="kaD-wT-xgc"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <gestureRecognizers/>
                             </stackView>
@@ -140,10 +104,9 @@
                             <outletCollection property="gestureRecognizers" destination="4Ri-fZ-eVb" appends="YES" id="ReO-3g-NyR"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="BB8-ch-rPf"/>
+                    <navigationItem key="navigationItem" title="Ingresar" id="BB8-ch-rPf"/>
                     <connections>
                         <outlet property="buttonLogin" destination="MPJ-oI-Z1N" id="fak-27-PgR"/>
-                        <outlet property="labelError" destination="noH-07-DJM" id="Q3m-Yf-xic"/>
                         <outlet property="textFieldEmail" destination="a7P-R8-g66" id="hkr-V4-Esk"/>
                         <outlet property="textFieldPassword" destination="Fdw-80-nTF" id="Imb-UO-20t"/>
                         <outletCollection property="allTextFields" destination="a7P-R8-g66" collectionClass="NSMutableArray" id="6MT-fc-7Vj"/>
@@ -157,7 +120,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4489.855072463768" y="761.38392857142856"/>
+            <point key="canvasLocation" x="3542" y="1081"/>
         </scene>
         <!--Item-->
         <scene sceneID="mUD-FY-DUW">
@@ -263,13 +226,6 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="0a3-Fj-UvM"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="VvR-Jf-Lvs"/>
                             </scrollView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tDc-Q7-f9q">
-                                <rect key="frame" x="0.0" y="-24" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="Tcd-eP-68y"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5rD-vO-bTx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -302,7 +258,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4489.855072463768" y="1426.3392857142856"/>
+            <point key="canvasLocation" x="4320" y="1081"/>
         </scene>
         <!--My profile-->
         <scene sceneID="qQy-aJ-mVf">
@@ -601,7 +557,7 @@ El usuario acepta recibir notificaciones de publicidad de viajes con ofertas y p
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N3p-mI-iO4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5328" y="1434"/>
+            <point key="canvasLocation" x="5128" y="1081"/>
         </scene>
     </scenes>
     <resources>
@@ -613,9 +569,6 @@ El usuario acepta recibir notificaciones de publicidad de viajes con ofertas y p
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
