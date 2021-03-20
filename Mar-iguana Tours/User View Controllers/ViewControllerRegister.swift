@@ -26,7 +26,18 @@ class ViewControllerRegister: UIViewController {
     }
     
     @IBAction func onRegister(_ sender: UIButton) {
-        Utilities.switchRootController(navController: navigationController, Constants.Storyboard.vcProfile)
+        let storyBoardMain = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyBoardMain.instantiateViewController(identifier: Constants.Storyboard.vcProfile) as ViewControllerProfile
+        
+        // Fill the data of the view controller Profile 
+        let nombre = nombreTextField.text ?? Constants.cadenaVacia
+        let apellidos = apellidosTextField.text ?? Constants.cadenaVacia
+        viewController.nombrePropertie = nombre + " " + apellidos
+        viewController.emailPropertie = emailTextField.text ?? Constants.cadenaVacia
+        viewController.telefonoPropertie = telefonoTextFiled.text ?? Constants.cadenaVacia
+        viewController.sexoPropertie = "--"
+        viewController.fechaNacPropertie = "--"
+        navigationController?.setViewControllers([viewController], animated: true)
     }
 
     override func viewDidLoad() {
@@ -99,21 +110,20 @@ class ViewControllerRegister: UIViewController {
         }
     }
     
-    // Load this data from userDefaults, plist or JSON file in order
-    //Manda los datos a siguiente vista
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if segue.destination is ViewControllerProfile {
-            let vc = segue.destination as? ViewControllerProfile
-            let nombre = nombreTextField.text ?? Constants.cadenaVacia
-            let apellidos = apellidosTextField.text ?? Constants.cadenaVacia
-            vc?.nombrePropertie = nombre + " " + apellidos
-            vc?.emailPropertie = emailTextField.text ?? Constants.cadenaVacia
-            vc?.telefonoPropertie = telefonoTextFiled.text ?? Constants.cadenaVacia
-            vc?.sexoPropertie = "--"
-            vc?.fechaNacPropertie = "--"
-        }
-    }
+//    //Manda los datos a siguiente vista
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+//    {
+//        if segue.destination is ViewControllerProfile {
+//            let vc = segue.destination as? ViewControllerProfile
+//            let nombre = nombreTextField.text ?? Constants.cadenaVacia
+//            let apellidos = apellidosTextField.text ?? Constants.cadenaVacia
+//            vc?.nombrePropertie = nombre + " " + apellidos
+//            vc?.emailPropertie = emailTextField.text ?? Constants.cadenaVacia
+//            vc?.telefonoPropertie = telefonoTextFiled.text ?? Constants.cadenaVacia
+//            vc?.sexoPropertie = "--"
+//            vc?.fechaNacPropertie = "--"
+//        }
+//    }
     
     //elimina la suscripcion como observador
     override func viewWillDisappear(_ animated: Bool) {
