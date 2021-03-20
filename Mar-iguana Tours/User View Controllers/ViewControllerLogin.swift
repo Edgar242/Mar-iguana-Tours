@@ -73,9 +73,9 @@ class ViewControllerLogin: UIViewController {
     
     @objc func habilitaBoton() {
         if !textFieldEmail.hasError && !textFieldPassword.hasError {
-            FormatUtils.formatButtonDisabled(button: buttonLogin)
-        } else {
             FormatUtils.formatButtonEnabled(button: buttonLogin)
+        } else {
+            FormatUtils.formatButtonDisabled(button: buttonLogin)
         }
     }
 
