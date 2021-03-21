@@ -36,11 +36,6 @@ class ViewControllerProfile: UIViewController {
         super.viewDidLoad()
         
         FormatUtils.formatButtonEnabled(button: salirButton)
-        FormatUtils.formatNavBar(navBar:tituloNavBar)
-        
-        //Icono editar
-        let editarButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.edit, target: self, action: #selector(editar))
-        tituloNavBar.topItem?.rightBarButtonItem = editarButton
         
         //Forma redondeada de imagen
         userPhoto.layer.cornerRadius = userPhoto.bounds.size.width/2.0

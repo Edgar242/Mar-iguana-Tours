@@ -43,8 +43,6 @@ class ViewControllerRegister: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        FormatUtils.formatNavBar(navBar: navigationController!.navigationBar)
-        
         //Especifica que tipo de dato se va a validar
         nombreTextField.tipoDato = FloatinLabelInput.tipoNone
         apellidosTextField.tipoDato = FloatinLabelInput.tipoNone
@@ -87,7 +85,6 @@ class ViewControllerRegister: UIViewController {
         }
         
         tecladoArriba = true
-        print ("el teclado subió")
         // Obtenemos el tamaño final del teclado
         if let tamanioTeclado = (notificacion.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             // aumentamos el tamaño del content del scrollview, para que haga scroll y libre el teclado
@@ -101,7 +98,6 @@ class ViewControllerRegister: UIViewController {
             return
         }
         tecladoArriba = false
-        print ("el teclado se fue")
         
         // Obtenemos el tamaño final del teclado
         if let tamanioTeclado = (notificacion.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
@@ -109,21 +105,6 @@ class ViewControllerRegister: UIViewController {
             scrollView.contentSize.height -= tamanioTeclado.height
         }
     }
-    
-//    //Manda los datos a siguiente vista
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-//    {
-//        if segue.destination is ViewControllerProfile {
-//            let vc = segue.destination as? ViewControllerProfile
-//            let nombre = nombreTextField.text ?? Constants.cadenaVacia
-//            let apellidos = apellidosTextField.text ?? Constants.cadenaVacia
-//            vc?.nombrePropertie = nombre + " " + apellidos
-//            vc?.emailPropertie = emailTextField.text ?? Constants.cadenaVacia
-//            vc?.telefonoPropertie = telefonoTextFiled.text ?? Constants.cadenaVacia
-//            vc?.sexoPropertie = "--"
-//            vc?.fechaNacPropertie = "--"
-//        }
-//    }
     
     //elimina la suscripcion como observador
     override func viewWillDisappear(_ animated: Bool) {
