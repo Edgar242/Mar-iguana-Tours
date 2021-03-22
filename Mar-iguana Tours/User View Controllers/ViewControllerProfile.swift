@@ -29,6 +29,9 @@ class ViewControllerProfile: UIViewController {
     var passwdPropertie:String = ""
     
     @IBAction func onLogOut(_ sender: UIButton) {
+        // Save information of loged user
+        ConfigData.instance.set(key: "userLoggedIn", value: false)
+        
         Utilities.switchRootController(navController: navigationController, Constants.Storyboard.vcLoginOrRegister)
     }
     
@@ -56,6 +59,18 @@ class ViewControllerProfile: UIViewController {
         
         //Si no se encuentra imagen asigna la de default
         userPhoto.image = UIImage(named: "imgUserDefault")
+        
+        loadDataFromConfig()
+    }
+    
+    private func loadDataFromConfig() {
+        nombreLabel.text = ConfigData.instance.get(key: "name") as? String
+        telefonoLabel.text = ConfigData.instance.get(key: "phone") as? String
+        emailLabel.text = ConfigData.instance.get(key: "email") as? String
+        sexoLabel.text = ConfigData.instance.get(key: "genre") as? String
+        fechaNacLabel.text = ConfigData.instance.get(key: "dateOfBirth") as? String
+        // TODO: Use MD5 in password
+//        passwdLabel.text = ConfigData.instance.get(key: "password") as? String
     }
     
     @objc func editar (){

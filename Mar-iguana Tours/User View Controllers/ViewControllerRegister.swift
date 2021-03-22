@@ -26,18 +26,23 @@ class ViewControllerRegister: UIViewController {
     }
     
     @IBAction func onRegister(_ sender: UIButton) {
-        let storyBoardMain = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyBoardMain.instantiateViewController(identifier: Constants.Storyboard.vcProfile) as ViewControllerProfile
+        saveUserInfo()
         
-        // Fill the data of the view controller Profile 
+        Utilities.switchRootController(navController: navigationController, Constants.Storyboard.vcProfile)
+    }
+    
+    // Save user information into config
+    private func saveUserInfo() {
         let nombre = nombreTextField.text ?? Constants.cadenaVacia
         let apellidos = apellidosTextField.text ?? Constants.cadenaVacia
-        viewController.nombrePropertie = nombre + " " + apellidos
-        viewController.emailPropertie = emailTextField.text ?? Constants.cadenaVacia
-        viewController.telefonoPropertie = telefonoTextFiled.text ?? Constants.cadenaVacia
-        viewController.sexoPropertie = "--"
-        viewController.fechaNacPropertie = "--"
-        navigationController?.setViewControllers([viewController], animated: true)
+        ConfigData.instance.set(key: "userLoggedIn", value: true)
+        ConfigData.instance.set(key: "name", value: nombre + " " + apellidos)
+        ConfigData.instance.set(key: "email", value: emailTextField.text ?? Constants.cadenaVacia)
+        // TODO: Use MD5 in password
+//        ConfigData.instance.set(key: "password", value: passwdTextField.text ?? Constants.cadenaVacia)
+        ConfigData.instance.set(key: "phone", value: telefonoTextFiled.text ?? Constants.cadenaVacia)
+        ConfigData.instance.set(key: "genre", value: "--")
+        ConfigData.instance.set(key: "dateOfBirth", value: "--")
     }
 
     override func viewDidLoad() {

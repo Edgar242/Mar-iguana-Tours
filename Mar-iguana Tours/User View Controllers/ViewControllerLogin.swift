@@ -20,6 +20,10 @@ class ViewControllerLogin: UIViewController {
     @IBOutlet weak var buttonLogin: UIButton!
     
     @IBAction func onLogin(_ sender: UIButton) {
+        // Save login info
+        ConfigData.instance.set(key: "userLoggedIn", value: true)
+        ConfigData.instance.set(key: "email", value: textFieldEmail.text ?? Constants.cadenaVacia)
+        
         // Go to user profile
         Utilities.switchRootController(navController: navigationController, Constants.Storyboard.vcProfile)
     }
