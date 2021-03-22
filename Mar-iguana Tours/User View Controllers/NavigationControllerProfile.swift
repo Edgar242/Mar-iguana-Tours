@@ -14,14 +14,15 @@ class NavigationControllerProfile: UINavigationController {
 
         // Do any additional setup after loading the view.
         
-        // TODO: Check if user is logged in via JSON file
-        let userIsLoggedIn = true
-        if userIsLoggedIn {
-            // If user is logged in then load its profile
-            Utilities.switchRootController(navController: self, Constants.Storyboard.vcProfile)
-        } else {
-            Utilities.switchRootController(navController: self, Constants.Storyboard.vcLoginOrRegister)
+        if let userLoggedIn = ConfigData.instance.get(key: "userLoggedIn") {
+            if userLoggedIn as! Bool {
+                // If user is logged in then load its profile information
+                Utilities.switchRootController(navController: self, Constants.Storyboard.vcProfile)
+                return
+            }
         }
+        Utilities.switchRootController(navController: self, Constants.Storyboard.vcLoginOrRegister)
+        return
     }
 
     /*

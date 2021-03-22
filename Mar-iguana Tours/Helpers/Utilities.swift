@@ -21,4 +21,12 @@ class Utilities {
         // This is needed when this function is called from NavigationControllerProfile
         navController?.isNavigationBarHidden = false
     }
+    
+    static func showAlert(context: UIViewController, message: String) {
+        let ac = UIAlertController(title: "RESULTADO", message: message, preferredStyle: .alert)
+        let aa = UIAlertAction(title: "ok", style: .default, handler: nil)
+        ac.addAction(aa)
+        context.present(ac, animated:true)
+    }
+    
 }
