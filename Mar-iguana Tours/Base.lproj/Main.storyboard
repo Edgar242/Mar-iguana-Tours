@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g0y-9p-8bn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g0y-9p-8bn">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -149,7 +149,7 @@
                                 <rect key="frame" x="40" y="20" width="334" height="768"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="sAp-5t-qnp">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="537"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="697"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agregue sus datos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqj-f0-ANs">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="18"/>
@@ -194,15 +194,49 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Yi-rF-ysm">
+                                                <rect key="frame" x="0.0" y="432" width="334" height="120"/>
+                                                <subviews>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3L5-nI-DHX">
+                                                        <rect key="frame" x="142.5" y="70" width="51" height="31"/>
+                                                        <color key="onTintColor" systemColor="systemGroupedBackgroundColor"/>
+                                                        <connections>
+                                                            <action selector="switchChanger:" destination="tSZ-b1-OHa" eventType="valueChanged" id="y0Y-j4-xsB"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Género" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4t-hw-H0e">
+                                                        <rect key="frame" x="8" y="8" width="56" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M       F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpQ-zz-ITg">
+                                                        <rect key="frame" x="140" y="34" width="54.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="LpQ-zz-ITg" firstAttribute="centerX" secondItem="3Yi-rF-ysm" secondAttribute="centerX" id="6qq-wt-mkX"/>
+                                                    <constraint firstItem="E4t-hw-H0e" firstAttribute="leading" secondItem="3Yi-rF-ysm" secondAttribute="leading" constant="8" id="Es2-iP-VHy"/>
+                                                    <constraint firstItem="3L5-nI-DHX" firstAttribute="centerX" secondItem="3Yi-rF-ysm" secondAttribute="centerX" id="IkO-Ml-3Zm"/>
+                                                    <constraint firstAttribute="height" constant="120" id="N2D-oh-Trm"/>
+                                                    <constraint firstItem="E4t-hw-H0e" firstAttribute="top" secondItem="3Yi-rF-ysm" secondAttribute="top" constant="14" id="QvV-mw-TZI"/>
+                                                    <constraint firstAttribute="bottom" secondItem="3L5-nI-DHX" secondAttribute="bottom" constant="19" id="hWn-tT-yZL"/>
+                                                    <constraint firstItem="3L5-nI-DHX" firstAttribute="top" secondItem="LpQ-zz-ITg" secondAttribute="bottom" constant="15.5" id="iqL-PL-wIQ"/>
+                                                </constraints>
+                                            </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="u4o-ma-1F0">
-                                                <rect key="frame" x="0.0" y="432" width="334" height="30"/>
+                                                <rect key="frame" x="0.0" y="592" width="334" height="30"/>
                                                 <state key="normal" title="Al registrarte aceptas nuestros terminos y condiciones."/>
                                                 <connections>
                                                     <segue destination="ipX-gL-O1G" kind="show" id="AQk-Yf-VOq"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsF-8U-xIp">
-                                                <rect key="frame" x="0.0" y="502" width="334" height="35"/>
+                                                <rect key="frame" x="0.0" y="662" width="334" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="AOs-z2-5IH"/>
                                                 </constraints>
@@ -243,6 +277,7 @@
                     <connections>
                         <outlet property="apellidosTextField" destination="RU0-UF-gWs" id="hW2-FA-30u"/>
                         <outlet property="emailTextField" destination="Oty-t9-gym" id="Mu1-uf-IYg"/>
+                        <outlet property="genderSwitch" destination="3L5-nI-DHX" id="rVE-gS-9Vq"/>
                         <outlet property="nombreTextField" destination="1AX-Yt-6Q5" id="vzR-ic-6GQ"/>
                         <outlet property="passwdTextField" destination="fvw-GJ-C8F" id="nZW-F0-JJP"/>
                         <outlet property="registroButton" destination="wsF-8U-xIp" id="ZrD-Zk-nov"/>
@@ -257,7 +292,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4320" y="1081"/>
+            <point key="canvasLocation" x="4318.840579710145" y="1080.8035714285713"/>
         </scene>
         <!--Perfil-->
         <scene sceneID="qQy-aJ-mVf">
@@ -584,6 +619,9 @@ El usuario acepta recibir notificaciones de publicidad de viajes con ofertas y p
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

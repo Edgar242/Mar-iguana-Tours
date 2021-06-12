@@ -6,11 +6,17 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class ViewControllerRegister: UIViewController {
+    
+    var gender = "M"
 
     @IBOutlet weak var scrollView: UIScrollView!
     var tecladoArriba = false
+    
+    @IBOutlet var genderSwitch: UISwitch!
     
     @IBOutlet weak var nombreTextField: FloatinLabelInput!
     @IBOutlet weak var apellidosTextField: FloatinLabelInput!
@@ -25,7 +31,31 @@ class ViewControllerRegister: UIViewController {
         view.endEditing(true)
     }
     
+    @IBAction func switchChanger(_ sender: UISwitch){
+        if sender.isOn{
+            self.gender = "F"
+        }else{
+            self.gender = "M"
+        }
+    }
+    
     @IBAction func onRegister(_ sender: UIButton) {
+        
+        Auth.auth().createUser(withEmail: (emailTextField.text)!, password: (passwdTextField.text)!) { (result, error) in
+            
+            if let error = error {
+                print("Error ocurred: ", error.localizedDescription)
+            }else{
+                guard let uID = result?.user.uid else { return }
+                let dbReference = Database.database().reference().child("User")
+                let userDB = dbReference.child(uID)
+                userDB.child("name").setValue(self.nombreTextField.text)
+                userDB.child("lastname").setValue(self.apellidosTextField.text)
+                userDB.child("phone_number").setValue(self.telefonoTextFiled.text)
+                userDB.child("gender").setValue(self.gender)
+            }
+        }
+        
         saveUserInfo()
         
         Utilities.switchRootController(navController: navigationController, Constants.Storyboard.vcProfile)
