@@ -7,6 +7,7 @@
 
 import UIKit
 import AVKit
+import FirebaseAnalytics
 
 class ViewControllerLogin: UIViewController {
     
@@ -36,6 +37,7 @@ class ViewControllerLogin: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Analytics.logEvent("Conexión", parameters: ["message":"Integrado"])
 
         setupElements()
 //        setupVideo()
