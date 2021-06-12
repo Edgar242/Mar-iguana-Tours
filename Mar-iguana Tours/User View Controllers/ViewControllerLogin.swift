@@ -24,14 +24,17 @@ class ViewControllerLogin: UIViewController {
     @IBAction func onLogin(_ sender: UIButton) {
         
         if let email = textFieldEmail.text, let password = textFieldPassword.text{
-            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-                if let result = result, error == nil {
-                    // Save login info
-                    ConfigData.instance.set(key: "userLoggedIn", value: true)
-                    ConfigData.instance.set(key: "email", value: result.user.email ?? Constants.cadenaVacia)
+            Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
+                if (result != nil), err == nil {
                     
                     // Go to user profile
                     Utilities.switchRootController(navController: self.navigationController, Constants.Storyboard.vcProfile)
+                }else{
+                    let alertController = UIAlertController(title: "Error:", message: "No se ha podido ingresar", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                    
+                    self.present(alertController,  animated: true,  completion: nil)
+                    
                 }
             }
         }

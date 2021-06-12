@@ -43,8 +43,11 @@ class ViewControllerRegister: UIViewController {
         
         Auth.auth().createUser(withEmail: (emailTextField.text)!, password: (passwdTextField.text)!) { (result, error) in
             
-            if let error = error {
-                print("Error ocurred: ", error.localizedDescription)
+            if error != nil {
+                let alertController = UIAlertController(title: "Error:", message: "No se ha podido registrar", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                
+                self.present(alertController,  animated: true,  completion: nil)
             }else{
                 guard let uID = result?.user.uid else { return }
                 let dbReference = Database.database().reference().child("User")
@@ -53,26 +56,11 @@ class ViewControllerRegister: UIViewController {
                 userDB.child("lastname").setValue(self.apellidosTextField.text)
                 userDB.child("phone_number").setValue(self.telefonoTextFiled.text)
                 userDB.child("gender").setValue(self.gender)
+                
+                Utilities.switchRootController(navController: self.navigationController, Constants.Storyboard.vcProfile)
             }
         }
         
-        saveUserInfo()
-        
-        Utilities.switchRootController(navController: navigationController, Constants.Storyboard.vcProfile)
-    }
-    
-    // Save user information into config
-    private func saveUserInfo() {
-        let nombre = nombreTextField.text ?? Constants.cadenaVacia
-        let apellidos = apellidosTextField.text ?? Constants.cadenaVacia
-        ConfigData.instance.set(key: "userLoggedIn", value: true)
-        ConfigData.instance.set(key: "name", value: nombre + " " + apellidos)
-        ConfigData.instance.set(key: "email", value: emailTextField.text ?? Constants.cadenaVacia)
-        // TODO: Use MD5 in password
-//        ConfigData.instance.set(key: "password", value: passwdTextField.text ?? Constants.cadenaVacia)
-        ConfigData.instance.set(key: "phone", value: telefonoTextFiled.text ?? Constants.cadenaVacia)
-        ConfigData.instance.set(key: "genre", value: "--")
-        ConfigData.instance.set(key: "dateOfBirth", value: "--")
     }
 
     override func viewDidLoad() {
