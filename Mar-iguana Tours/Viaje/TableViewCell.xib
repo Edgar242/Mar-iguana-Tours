@@ -18,10 +18,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="277"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XzR-Pf-J8c">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XzR-Pf-J8c">
                         <rect key="frame" x="10" y="8" width="300" height="136"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="145.5" id="qOY-jb-cfu"/>
+                            <constraint firstAttribute="height" constant="136" id="qOY-jb-cfu"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título del Viaje" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6f-sZ-Jb9">
@@ -72,10 +72,10 @@
                     <constraint firstItem="gj5-hF-Jum" firstAttribute="leading" secondItem="XfZ-no-nBS" secondAttribute="trailing" constant="2" id="I8N-ap-TJJ"/>
                     <constraint firstItem="gj5-hF-Jum" firstAttribute="top" secondItem="v6Y-7F-VnS" secondAttribute="bottom" constant="16" id="IdW-Dj-tBm"/>
                     <constraint firstAttribute="bottomMargin" secondItem="v6Y-7F-VnS" secondAttribute="bottom" constant="36" id="KMK-Yy-B8y"/>
-                    <constraint firstItem="XzR-Pf-J8c" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="Ld6-xK-eiC"/>
+                    <constraint firstItem="XzR-Pf-J8c" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Ld6-xK-eiC"/>
                     <constraint firstItem="WI9-DJ-zLr" firstAttribute="top" secondItem="v6Y-7F-VnS" secondAttribute="bottom" constant="15.5" id="SnJ-Tp-vNP"/>
                     <constraint firstAttribute="trailing" secondItem="XzR-Pf-J8c" secondAttribute="trailing" constant="10" id="Tag-Jy-d2l"/>
-                    <constraint firstItem="v6Y-7F-VnS" firstAttribute="top" secondItem="XzR-Pf-J8c" secondAttribute="bottom" constant="43.5" id="VXe-3O-GoJ"/>
+                    <constraint firstItem="v6Y-7F-VnS" firstAttribute="top" secondItem="XzR-Pf-J8c" secondAttribute="bottom" constant="65" id="VXe-3O-GoJ"/>
                     <constraint firstItem="XzR-Pf-J8c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ZEr-cd-kdf"/>
                     <constraint firstAttribute="bottom" secondItem="60Z-4a-vLa" secondAttribute="bottom" constant="10" id="bsO-cG-a36"/>
                     <constraint firstItem="XfZ-no-nBS" firstAttribute="top" secondItem="v6Y-7F-VnS" secondAttribute="bottom" constant="16" id="ej0-K3-9Ug"/>
