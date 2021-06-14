@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '13.0'
 
 target 'Mar-iguana Tours' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -14,7 +14,7 @@ target 'Mar-iguana Tours' do
   # add pods for any other desired Firebase products
   # https://firebase.google.com/docs/ios/setup#available-pods
   
-  
-  pod 'StepIndicator', '~> 1.0.8'
+
+  pod 'StepView'
 
 end

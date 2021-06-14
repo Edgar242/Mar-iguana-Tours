@@ -82,12 +82,12 @@ PODS:
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - PromisesObjC (1.2.12)
-  - StepIndicator (1.0.8)
+  - StepView (1.0.5)
 
 DEPENDENCIES:
   - Firebase/Analytics (~> 7.2)
   - FirebaseCore (~> 7.2)
-  - StepIndicator (~> 1.0.8)
+  - StepView
 
 SPEC REPOS:
   trunk:
@@ -101,7 +101,7 @@ SPEC REPOS:
     - GoogleUtilities
     - nanopb
     - PromisesObjC
-    - StepIndicator
+    - StepView
 
 SPEC CHECKSUMS:
   Firebase: c121feb35e4126c0b355e3313fa9b487d47319fd
@@ -114,8 +114,8 @@ SPEC CHECKSUMS:
   GoogleUtilities: f8a43108b38a68eebe8b3540e1f4f2d28843ce20
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
-  StepIndicator: 748b293f671355b021253f82031ac002f153dc81
+  StepView: e69413ca377b42c5777d446854bb036ff8e988fd
 
-PODFILE CHECKSUM: 039464540ffe5d322bde65dd4ff46b122b9d135c
+PODFILE CHECKSUM: 4b1e9ce0b867876267af230004af5e94247b04c9
 
 COCOAPODS: 1.10.1

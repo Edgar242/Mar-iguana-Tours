@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double StepIndicatorVersionNumber;
-FOUNDATION_EXPORT const unsigned char StepIndicatorVersionString[];
+FOUNDATION_EXPORT double StepViewVersionNumber;
+FOUNDATION_EXPORT const unsigned char StepViewVersionString[];
 
