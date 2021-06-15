@@ -98,12 +98,14 @@ PODS:
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - PromisesObjC (1.2.12)
+  - StepView (1.0.5)
 
 DEPENDENCIES:
   - Firebase/Analytics (~> 7.2)
   - Firebase/Auth (~> 7.2)
   - Firebase/Database (~> 7.2)
   - FirebaseCore (~> 7.2)
+  - StepView
 
 SPEC REPOS:
   trunk:
@@ -121,6 +123,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
+    - StepView
 
 SPEC CHECKSUMS:
   Firebase: c121feb35e4126c0b355e3313fa9b487d47319fd
@@ -137,7 +140,8 @@ SPEC CHECKSUMS:
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  StepView: e69413ca377b42c5777d446854bb036ff8e988fd
 
-PODFILE CHECKSUM: 6ae2539e0d36076982b1e6a3b8c760c86ddaa8b3
+PODFILE CHECKSUM: 855e42c0a7e0552a8329b2c3aa91f89515b5450b
 
 COCOAPODS: 1.10.1
