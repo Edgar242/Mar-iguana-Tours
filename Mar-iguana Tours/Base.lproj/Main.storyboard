@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Li-be-i7U">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g0y-9p-8bn">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -37,6 +37,141 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xVD-uw-Xd9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1203" y="421"/>
+        </scene>
+        <!--View Controller Book Step-->
+        <scene sceneID="jzP-Ne-nYX">
+            <objects>
+                <viewController id="4i2-bj-ufh" customClass="ViewControllerBookStep" customModule="Mar_iguana_Tours" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gnU-Fe-crM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2y7-TD-p4V">
+                                <rect key="frame" x="0.0" y="144" width="414" height="668"/>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jsz-5u-ZP1" customClass="StepView" customModule="StepView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="oUE-yB-Qlq"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfSteps">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvf-Mg-lUD" userLabel="Next Button">
+                                <rect key="frame" x="330" y="822" width="64" height="30"/>
+                                <state key="normal" title="Siguiente"/>
+                                <connections>
+                                    <action selector="nextButtonDidPress:" destination="4i2-bj-ufh" eventType="touchUpInside" id="HXj-93-dyY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tU7-HM-no2">
+                                <rect key="frame" x="20" y="822" width="36" height="30"/>
+                                <state key="normal" title="Atrás"/>
+                                <connections>
+                                    <action selector="backButtonDidPress:" destination="4i2-bj-ufh" eventType="touchUpInside" id="ycg-Ic-ZMz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXl-K1-v4r">
+                                <rect key="frame" x="20" y="114" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DGI-ks-Uxr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DGI-ks-Uxr" firstAttribute="trailing" secondItem="zvf-Mg-lUD" secondAttribute="trailing" constant="20" id="1jG-lF-XZN"/>
+                            <constraint firstItem="tU7-HM-no2" firstAttribute="leading" secondItem="DGI-ks-Uxr" secondAttribute="leading" constant="20" id="3ww-Wv-6l3"/>
+                            <constraint firstItem="DGI-ks-Uxr" firstAttribute="bottom" secondItem="tU7-HM-no2" secondAttribute="bottom" constant="10" id="HPy-1e-Ypi"/>
+                            <constraint firstItem="2y7-TD-p4V" firstAttribute="leading" secondItem="DGI-ks-Uxr" secondAttribute="leading" id="K0L-iY-fmE"/>
+                            <constraint firstItem="DGI-ks-Uxr" firstAttribute="trailing" secondItem="2y7-TD-p4V" secondAttribute="trailing" id="Ksd-R3-qHq"/>
+                            <constraint firstItem="wXl-K1-v4r" firstAttribute="top" secondItem="Jsz-5u-ZP1" secondAttribute="bottom" constant="10" id="Tqc-te-f8P"/>
+                            <constraint firstItem="2y7-TD-p4V" firstAttribute="top" secondItem="Jsz-5u-ZP1" secondAttribute="bottom" constant="40" id="VwG-43-lRg"/>
+                            <constraint firstItem="DGI-ks-Uxr" firstAttribute="bottom" secondItem="zvf-Mg-lUD" secondAttribute="bottom" constant="10" id="c9b-KZ-A4j"/>
+                            <constraint firstItem="Jsz-5u-ZP1" firstAttribute="leading" secondItem="DGI-ks-Uxr" secondAttribute="leading" id="cdx-TB-f8m"/>
+                            <constraint firstItem="DGI-ks-Uxr" firstAttribute="trailing" secondItem="Jsz-5u-ZP1" secondAttribute="trailing" id="nMe-PY-wvy"/>
+                            <constraint firstItem="zvf-Mg-lUD" firstAttribute="top" secondItem="2y7-TD-p4V" secondAttribute="bottom" constant="10" id="rPg-zE-VHm"/>
+                            <constraint firstItem="DGI-ks-Uxr" firstAttribute="trailing" secondItem="wXl-K1-v4r" secondAttribute="trailing" constant="20" id="tX5-eG-YgJ"/>
+                            <constraint firstItem="Jsz-5u-ZP1" firstAttribute="top" secondItem="DGI-ks-Uxr" secondAttribute="top" id="yOr-pM-gVO"/>
+                            <constraint firstItem="wXl-K1-v4r" firstAttribute="leading" secondItem="DGI-ks-Uxr" secondAttribute="leading" constant="20" id="z78-U0-TBJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="tU7-HM-no2" id="xUP-0F-nKf"/>
+                        <outlet property="containerView" destination="2y7-TD-p4V" id="7Ez-M8-YD2"/>
+                        <outlet property="nextButton" destination="zvf-Mg-lUD" id="I0G-7b-Zqz"/>
+                        <outlet property="stepTitle" destination="wXl-K1-v4r" id="Qt5-xq-91q"/>
+                        <outlet property="stepView" destination="Jsz-5u-ZP1" id="Fef-4r-Kfi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZfC-wf-qaf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2258" y="196"/>
+        </scene>
+        <!--View Controller Step1-->
+        <scene sceneID="lsj-9d-xPU">
+            <objects>
+                <viewController storyboardIdentifier="ViewControllerStep1" id="G74-tE-mDz" customClass="ViewControllerStep1" customModule="Mar_iguana_Tours" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7NL-mB-Jfo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="daK-jW-jBH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gOd-mk-OKQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2937" y="196"/>
+        </scene>
+        <!--View Controller Step2-->
+        <scene sceneID="m5e-Ls-sys">
+            <objects>
+                <viewController storyboardIdentifier="ViewControllerStep2" id="hup-ml-ED3" customClass="ViewControllerStep2" customModule="Mar_iguana_Tours" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eBD-8u-kHA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Z38-HK-W6Y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gMm-Tj-Dmc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3609" y="196"/>
+        </scene>
+        <!--View Controller Step3-->
+        <scene sceneID="Bud-eB-7AA">
+            <objects>
+                <viewController storyboardIdentifier="ViewControllerStep3" id="pDm-j4-uta" customClass="ViewControllerStep3" customModule="Mar_iguana_Tours" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K27-GQ-DXh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="SFi-7H-lsS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s98-me-3f5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4319" y="196"/>
+        </scene>
+        <!--View Controller Step4-->
+        <scene sceneID="CPu-1g-Vna">
+            <objects>
+                <viewController storyboardIdentifier="ViewControllerStep4" id="81g-cQ-j6R" customClass="ViewControllerStep4" customModule="Mar_iguana_Tours" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nFb-M0-Y8E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="NgV-1J-jS8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wnz-67-hgI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5039" y="196"/>
         </scene>
         <!--Ingresar-->
         <scene sceneID="74V-m9-Wdc">
@@ -573,26 +708,6 @@ El usuario acepta recibir notificaciones de publicidad de viajes con ofertas y p
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N3p-mI-iO4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5128" y="1081"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Cup-po-qS8">
-            <objects>
-                <viewController id="2Li-be-i7U" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="WlK-0Z-B74" customClass="StepView" customModule="Mar_iguana_Tours" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Xoj-BO-sTH"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="numberOfSteps">
-                                <integer key="value" value="3"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6ng-KO-rkZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2646" y="145"/>
         </scene>
     </scenes>
     <resources>
