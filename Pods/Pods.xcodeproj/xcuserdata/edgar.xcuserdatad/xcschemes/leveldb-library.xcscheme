@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1C4E58819CF044CC398CAE0699510C42"
-               BuildableName = "StepView.framework"
-               BlueprintName = "StepView"
+               BlueprintIdentifier = "9307B7A119490930CF70393AB529AAC1"
+               BuildableName = "leveldb.framework"
+               BlueprintName = "leveldb-library"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

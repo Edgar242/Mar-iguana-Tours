@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1C4E58819CF044CC398CAE0699510C42"
-               BuildableName = "StepView.framework"
-               BlueprintName = "StepView"
+               BlueprintIdentifier = "D676E21115185671D7258A56944ABE98"
+               BuildableName = "GTMSessionFetcher.framework"
+               BlueprintName = "GTMSessionFetcher"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
