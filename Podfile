@@ -8,6 +8,8 @@ target 'Mar-iguana Tours' do
   # add the Firebase pod for Google Analytics
   pod 'FirebaseCore', '~> 7.2'
   pod 'Firebase/Analytics', '~> 7.2'
+  pod 'Firebase/Auth', '~> 7.2'
+  pod 'Firebase/Database', '~> 7.2'
   # or pod ‘Firebase/AnalyticsWithoutAdIdSupport’
   # for Analytics without IDFA collection capability
 

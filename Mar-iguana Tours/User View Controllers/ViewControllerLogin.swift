@@ -8,6 +8,7 @@
 import UIKit
 import AVKit
 import FirebaseAnalytics
+import FirebaseAuth
 
 class ViewControllerLogin: UIViewController {
     
@@ -21,12 +22,23 @@ class ViewControllerLogin: UIViewController {
     @IBOutlet weak var buttonLogin: UIButton!
     
     @IBAction func onLogin(_ sender: UIButton) {
-        // Save login info
-        ConfigData.instance.set(key: "userLoggedIn", value: true)
-        ConfigData.instance.set(key: "email", value: textFieldEmail.text ?? Constants.cadenaVacia)
         
-        // Go to user profile
-        Utilities.switchRootController(navController: navigationController, Constants.Storyboard.vcProfile)
+        if let email = textFieldEmail.text, let password = textFieldPassword.text{
+            Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
+                if (result != nil), err == nil {
+                    
+                    // Go to user profile
+                    Utilities.switchRootController(navController: self.navigationController, Constants.Storyboard.vcProfile)
+                }else{
+                    let alertController = UIAlertController(title: "Error:", message: "No se ha podido ingresar", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                    
+                    self.present(alertController,  animated: true,  completion: nil)
+                    
+                }
+            }
+        }
+        
     }
     
     // Detects when the user tap (pressed) on the view

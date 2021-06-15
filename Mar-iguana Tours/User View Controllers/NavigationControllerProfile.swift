@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class NavigationControllerProfile: UINavigationController {
 
@@ -14,12 +15,9 @@ class NavigationControllerProfile: UINavigationController {
 
         // Do any additional setup after loading the view.
         
-        if let userLoggedIn = ConfigData.instance.get(key: "userLoggedIn") {
-            if userLoggedIn as! Bool {
-                // If user is logged in then load its profile information
-                Utilities.switchRootController(navController: self, Constants.Storyboard.vcProfile)
-                return
-            }
+        if Auth.auth().currentUser != nil {
+            Utilities.switchRootController(navController: self, Constants.Storyboard.vcProfile)
+            return
         }
         Utilities.switchRootController(navController: self, Constants.Storyboard.vcLoginOrRegister)
         return
