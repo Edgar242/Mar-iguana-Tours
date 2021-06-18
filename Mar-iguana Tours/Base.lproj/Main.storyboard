@@ -165,13 +165,158 @@
                     <view key="view" contentMode="scaleToFill" id="nFb-M0-Y8E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFW-0J-kbW">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="lbX-pG-2pM">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="652"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z9U-nq-kFF">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elige un método de pago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nn6-LV-7nR">
+                                                        <rect key="frame" x="8" y="70" width="189.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="nn6-LV-7nR" firstAttribute="leading" secondItem="z9U-nq-kFF" secondAttribute="leading" constant="8" id="3pT-k0-NAW"/>
+                                                    <constraint firstItem="nn6-LV-7nR" firstAttribute="top" secondItem="z9U-nq-kFF" secondAttribute="top" constant="70" id="feb-AG-hmL"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nn6-LV-7nR" secondAttribute="trailing" constant="20" symbolic="YES" id="ryg-Fm-2wi"/>
+                                                    <constraint firstAttribute="height" constant="128" id="uVw-nQ-aEu"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DPJ-1c-pqA">
+                                                <rect key="frame" x="0.0" y="144" width="414" height="200"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transferencia bancaria" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vr-ir-LoU">
+                                                        <rect key="frame" x="8" y="8" width="398" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Realiza una transferencia con la cantidad indicada a la siguiente cuenta:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03Z-gR-nBK">
+                                                        <rect key="frame" x="8" y="36.5" width="398" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLABE: 123 344443 233443 323" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlK-xF-Uxh">
+                                                        <rect key="frame" x="8" y="101.5" width="398" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Referencia: *nombre del viaje" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obv-33-q51">
+                                                        <rect key="frame" x="8" y="130" width="398" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="2vr-ir-LoU" secondAttribute="trailing" constant="8" id="21p-oz-4tA"/>
+                                                    <constraint firstItem="dlK-xF-Uxh" firstAttribute="top" secondItem="03Z-gR-nBK" secondAttribute="bottom" constant="24" id="BGT-VM-6l0"/>
+                                                    <constraint firstItem="2vr-ir-LoU" firstAttribute="leading" secondItem="DPJ-1c-pqA" secondAttribute="leading" constant="8" id="Nif-Lm-lCZ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="03Z-gR-nBK" secondAttribute="trailing" constant="8" id="No8-dH-FQS"/>
+                                                    <constraint firstItem="03Z-gR-nBK" firstAttribute="leading" secondItem="DPJ-1c-pqA" secondAttribute="leading" constant="8" id="PMf-U6-ukp"/>
+                                                    <constraint firstItem="Obv-33-q51" firstAttribute="top" secondItem="dlK-xF-Uxh" secondAttribute="bottom" constant="8" id="RNu-9e-Iwa"/>
+                                                    <constraint firstItem="Obv-33-q51" firstAttribute="leading" secondItem="DPJ-1c-pqA" secondAttribute="leading" constant="8" id="Wd6-kx-gRk"/>
+                                                    <constraint firstItem="dlK-xF-Uxh" firstAttribute="top" secondItem="03Z-gR-nBK" secondAttribute="bottom" constant="24" id="aNb-2L-W46"/>
+                                                    <constraint firstAttribute="trailing" secondItem="dlK-xF-Uxh" secondAttribute="trailing" constant="8" id="gIQ-xj-vXn"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Obv-33-q51" secondAttribute="trailing" constant="8" id="heT-de-tyg"/>
+                                                    <constraint firstItem="dlK-xF-Uxh" firstAttribute="leading" secondItem="DPJ-1c-pqA" secondAttribute="leading" constant="8" id="muo-3r-5v3"/>
+                                                    <constraint firstAttribute="height" constant="200" id="q5n-s1-TaE"/>
+                                                    <constraint firstItem="2vr-ir-LoU" firstAttribute="top" secondItem="DPJ-1c-pqA" secondAttribute="top" constant="8" id="uX4-XC-h4l"/>
+                                                    <constraint firstItem="03Z-gR-nBK" firstAttribute="top" secondItem="2vr-ir-LoU" secondAttribute="bottom" constant="8" id="xJo-nk-fJT"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wzf-MJ-ffg">
+                                                <rect key="frame" x="0.0" y="360" width="414" height="200"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pago en efectivo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kz-Nl-Ay0">
+                                                        <rect key="frame" x="8" y="8" width="398" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dirígete a nuestras instalaciones en la Ciudad de México." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dY6-xJ-M8X">
+                                                        <rect key="frame" x="8" y="36.5" width="398" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dirección: Avenida Hidalgo 203, La Condesa, Ciudad de México" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bel-Fq-LMc">
+                                                        <rect key="frame" x="8" y="101.5" width="398" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teléfono: 555000400" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Cd-sF-lLL">
+                                                        <rect key="frame" x="8" y="150.5" width="398" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Bel-Fq-LMc" secondAttribute="trailing" constant="8" id="2k1-Q7-QK1"/>
+                                                    <constraint firstAttribute="height" constant="200" id="4S9-T9-Ay9"/>
+                                                    <constraint firstAttribute="trailing" secondItem="8Kz-Nl-Ay0" secondAttribute="trailing" constant="8" id="7Jr-gs-Lyz"/>
+                                                    <constraint firstItem="dY6-xJ-M8X" firstAttribute="leading" secondItem="wzf-MJ-ffg" secondAttribute="leading" constant="8" id="D0e-VQ-oOX"/>
+                                                    <constraint firstItem="Bel-Fq-LMc" firstAttribute="top" secondItem="dY6-xJ-M8X" secondAttribute="bottom" constant="24" id="DRy-DX-GHO"/>
+                                                    <constraint firstItem="Bel-Fq-LMc" firstAttribute="leading" secondItem="wzf-MJ-ffg" secondAttribute="leading" constant="8" id="IKE-zB-2Bw"/>
+                                                    <constraint firstAttribute="trailing" secondItem="dY6-xJ-M8X" secondAttribute="trailing" constant="8" id="Mvl-uZ-rM9"/>
+                                                    <constraint firstItem="8Kz-Nl-Ay0" firstAttribute="leading" secondItem="wzf-MJ-ffg" secondAttribute="leading" constant="8" id="QLp-H1-RT7"/>
+                                                    <constraint firstItem="8Kz-Nl-Ay0" firstAttribute="top" secondItem="wzf-MJ-ffg" secondAttribute="top" constant="8" id="ZR5-rC-x0V"/>
+                                                    <constraint firstItem="Bel-Fq-LMc" firstAttribute="top" secondItem="dY6-xJ-M8X" secondAttribute="bottom" constant="24" id="a5m-wy-KZT"/>
+                                                    <constraint firstItem="3Cd-sF-lLL" firstAttribute="leading" secondItem="wzf-MJ-ffg" secondAttribute="leading" constant="8" id="b6O-56-9vA"/>
+                                                    <constraint firstItem="3Cd-sF-lLL" firstAttribute="top" secondItem="Bel-Fq-LMc" secondAttribute="bottom" constant="8" id="h6h-2M-acu"/>
+                                                    <constraint firstItem="dY6-xJ-M8X" firstAttribute="top" secondItem="8Kz-Nl-Ay0" secondAttribute="bottom" constant="8" id="kxZ-5B-n0M"/>
+                                                    <constraint firstAttribute="trailing" secondItem="3Cd-sF-lLL" secondAttribute="trailing" constant="8" id="oKy-8x-ncz"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKq-RS-jE3">
+                                                <rect key="frame" x="0.0" y="576" width="414" height="30"/>
+                                                <state key="normal" title="Tomar foto"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwU-AH-a9X">
+                                                <rect key="frame" x="0.0" y="622" width="414" height="30"/>
+                                                <state key="normal" title="Seleccionar foto de la galería"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="lbX-pG-2pM" firstAttribute="trailing" secondItem="hKG-ZT-zqC" secondAttribute="trailing" id="ADB-a4-i0I"/>
+                                    <constraint firstItem="lbX-pG-2pM" firstAttribute="top" secondItem="hKG-ZT-zqC" secondAttribute="top" id="i1J-5z-7mB"/>
+                                    <constraint firstItem="lbX-pG-2pM" firstAttribute="width" secondItem="yQT-YX-yLy" secondAttribute="width" id="pW3-wz-cIp"/>
+                                    <constraint firstItem="lbX-pG-2pM" firstAttribute="bottom" secondItem="hKG-ZT-zqC" secondAttribute="bottom" id="pZT-IR-bRM"/>
+                                    <constraint firstItem="lbX-pG-2pM" firstAttribute="leading" secondItem="hKG-ZT-zqC" secondAttribute="leading" id="vfZ-9D-l2e"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="hKG-ZT-zqC"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="yQT-YX-yLy"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="NgV-1J-jS8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aFW-0J-kbW" firstAttribute="leading" secondItem="NgV-1J-jS8" secondAttribute="leading" id="0rS-l9-x5i"/>
+                            <constraint firstItem="aFW-0J-kbW" firstAttribute="top" secondItem="nFb-M0-Y8E" secondAttribute="top" id="4Od-B1-YcH"/>
+                            <constraint firstAttribute="bottom" secondItem="aFW-0J-kbW" secondAttribute="bottom" id="GMZ-vw-S4d"/>
+                            <constraint firstItem="aFW-0J-kbW" firstAttribute="trailing" secondItem="NgV-1J-jS8" secondAttribute="trailing" id="snm-ID-wcr"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wnz-67-hgI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5039" y="196"/>
+            <point key="canvasLocation" x="5037.68115942029" y="195.53571428571428"/>
         </scene>
         <!--Ingresar-->
         <scene sceneID="74V-m9-Wdc">
