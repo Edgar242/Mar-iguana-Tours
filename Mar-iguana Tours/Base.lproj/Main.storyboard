@@ -170,7 +170,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="lbX-pG-2pM">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="652"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="606"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z9U-nq-kFF">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
@@ -285,10 +285,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKq-RS-jE3">
                                                 <rect key="frame" x="0.0" y="576" width="414" height="30"/>
                                                 <state key="normal" title="Tomar foto"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwU-AH-a9X">
-                                                <rect key="frame" x="0.0" y="622" width="414" height="30"/>
-                                                <state key="normal" title="Seleccionar foto de la galería"/>
+                                                <connections>
+                                                    <action selector="takePhotoAction:" destination="81g-cQ-j6R" eventType="touchUpInside" id="WNV-Fo-Jcx"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
