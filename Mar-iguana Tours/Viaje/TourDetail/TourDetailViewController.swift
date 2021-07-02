@@ -36,6 +36,14 @@ class TourDetailViewController:UITabBarController{
         
         view.addSubview(sliderCollectionView ?? UICollectionView())
 
+        //Get images and fill image array
+        let imagesTour:[String] = tourSelected?.images ?? [""]
+        for image in imagesTour {
+            let url = URL(string: image)
+            let data = try? Data(contentsOf: url!)
+            arrImagesTour.append(UIImage(data: data!)!)
+        }
+        
         //Page control
         let dframe = CGRect(x: 20, y: 220, width: sliderCollectionView.frame.width - 40, height: 20)
         pageView = UIPageControl(frame: dframe)
@@ -56,12 +64,6 @@ class TourDetailViewController:UITabBarController{
         //Navigator item
         self.navigationItem.hidesBackButton = true
         
-        let imagesTour:[String] = tourSelected?.images ?? [""]
-        for image in imagesTour {
-            let url = URL(string: image)
-            let data = try? Data(contentsOf: url!)
-            arrImagesTour.append(UIImage(data: data!)!)
-        }
         
         //Pass info to view controller in the tabbar
         let infoTourController = self.viewControllers![0] as! TourInfoViewController
