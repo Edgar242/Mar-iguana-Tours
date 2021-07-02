@@ -27,6 +27,11 @@
 		6DA4C24B25F5C5BB00674DFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DA4C24A25F5C5BB00674DFD /* Assets.xcassets */; };
 		6DA4C24E25F5C5BB00674DFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DA4C24C25F5C5BB00674DFD /* LaunchScreen.storyboard */; };
 		6DB72C6025FE232500D83752 /* ConfigData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB72C5F25FE232500D83752 /* ConfigData.swift */; };
+		843522E5268E7E4B00BD4135 /* TourInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843522E4268E7E4B00BD4135 /* TourInfoViewController.swift */; };
+		843522E7268E7EA200BD4135 /* TourItineraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843522E6268E7EA200BD4135 /* TourItineraryViewController.swift */; };
+		843522E9268E95B500BD4135 /* Tour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843522E8268E95B500BD4135 /* Tour.swift */; };
+		849134F6268949A000DA0033 /* TourDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849134F5268949A000DA0033 /* TourDetailViewController.swift */; };
+		84CBB5FF268F8F3300B6BF57 /* TabBarInitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBB5FE268F8F3300B6BF57 /* TabBarInitViewController.swift */; };
 		90F5134D1E507C20868FE676 /* Pods_Mar_iguana_Tours.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBEBCD3341FE1787354AD572 /* Pods_Mar_iguana_Tours.framework */; };
 		9FB31B3D25FF0883006EA3D2 /* FloatinLabelInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB31B3C25FF0883006EA3D2 /* FloatinLabelInput.swift */; };
 		9FB31B4326001ADC006EA3D2 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB31B4226001ADC006EA3D2 /* ColorUtils.swift */; };
@@ -60,6 +65,11 @@
 		6DA4C24D25F5C5BB00674DFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6DA4C24F25F5C5BB00674DFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DB72C5F25FE232500D83752 /* ConfigData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigData.swift; sourceTree = "<group>"; };
+		843522E4268E7E4B00BD4135 /* TourInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourInfoViewController.swift; sourceTree = "<group>"; };
+		843522E6268E7EA200BD4135 /* TourItineraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourItineraryViewController.swift; sourceTree = "<group>"; };
+		843522E8268E95B500BD4135 /* Tour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tour.swift; sourceTree = "<group>"; };
+		849134F5268949A000DA0033 /* TourDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourDetailViewController.swift; sourceTree = "<group>"; };
+		84CBB5FE268F8F3300B6BF57 /* TabBarInitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarInitViewController.swift; sourceTree = "<group>"; };
 		96A0CC8EB684396331E31E67 /* Pods-Mar-iguana Tours.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mar-iguana Tours.debug.xcconfig"; path = "Target Support Files/Pods-Mar-iguana Tours/Pods-Mar-iguana Tours.debug.xcconfig"; sourceTree = "<group>"; };
 		9FB31B3C25FF0883006EA3D2 /* FloatinLabelInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatinLabelInput.swift; sourceTree = "<group>"; };
 		9FB31B4226001ADC006EA3D2 /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
@@ -140,11 +150,14 @@
 		6D3DC6002605DEAB00A09E63 /* Viaje */ = {
 			isa = PBXGroup;
 			children = (
+				849134F42689493A00DA0033 /* TourDetail */,
 				6D1EBA522678187A0051D150 /* Booking */,
 				9FBFF9A825F992EE00FA9796 /* Viaje.swift */,
 				9FBFF99C25F81E5300FA9796 /* TableTableViewController.swift */,
 				9FBFF99F25F82CD000FA9796 /* TableViewCell.swift */,
 				9FBFF9A025F82CD000FA9796 /* TableViewCell.xib */,
+				843522E8268E95B500BD4135 /* Tour.swift */,
+				84CBB5FE268F8F3300B6BF57 /* TabBarInitViewController.swift */,
 			);
 			path = Viaje;
 			sourceTree = "<group>";
@@ -192,6 +205,16 @@
 				EBEBCD3341FE1787354AD572 /* Pods_Mar_iguana_Tours.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		849134F42689493A00DA0033 /* TourDetail */ = {
+			isa = PBXGroup;
+			children = (
+				849134F5268949A000DA0033 /* TourDetailViewController.swift */,
+				843522E4268E7E4B00BD4135 /* TourInfoViewController.swift */,
+				843522E6268E7EA200BD4135 /* TourItineraryViewController.swift */,
+			);
+			path = TourDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,8 +335,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CBB5FF268F8F3300B6BF57 /* TabBarInitViewController.swift in Sources */,
 				9FBFF99D25F81E5300FA9796 /* TableTableViewController.swift in Sources */,
 				9FBFF9A925F992EE00FA9796 /* Viaje.swift in Sources */,
+				843522E5268E7E4B00BD4135 /* TourInfoViewController.swift in Sources */,
 				6D1EBA8B267888300051D150 /* ViewControllerStep4.swift in Sources */,
 				6D1EBA88267888120051D150 /* ViewControllerStep3.swift in Sources */,
 				6DA4C24925F5C5BA00674DFD /* Mar_iguana_Tours.xcdatamodeld in Sources */,
@@ -323,15 +348,18 @@
 				6D1EBA6326781BA20051D150 /* ViewControllerBookStep.swift in Sources */,
 				9FB31B3D25FF0883006EA3D2 /* FloatinLabelInput.swift in Sources */,
 				6D084A9525F77F7000068E13 /* ViewControllerLogin.swift in Sources */,
+				843522E7268E7EA200BD4135 /* TourItineraryViewController.swift in Sources */,
 				9FB31B4726001FDE006EA3D2 /* FormatUtils.swift in Sources */,
 				9FB31B4326001ADC006EA3D2 /* ColorUtils.swift in Sources */,
 				6D084AA025F79D8A00068E13 /* ViewControllerRegister.swift in Sources */,
 				6DA4C23F25F5C5BA00674DFD /* AppDelegate.swift in Sources */,
 				6D084AA625F79EA900068E13 /* Utilities.swift in Sources */,
 				6D3E63CA26045E900034152D /* NavigationControllerProfile.swift in Sources */,
+				849134F6268949A000DA0033 /* TourDetailViewController.swift in Sources */,
 				6D1EBA93267888760051D150 /* ViewControllerStep1.swift in Sources */,
 				6DA4C24125F5C5BA00674DFD /* SceneDelegate.swift in Sources */,
 				6DB72C6025FE232500D83752 /* ConfigData.swift in Sources */,
+				843522E9268E95B500BD4135 /* Tour.swift in Sources */,
 				6D084AA925F7C18D00068E13 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,14 +510,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BZ84JAS22T;
+				DEVELOPMENT_TEAM = KULQ32KAR6;
 				INFOPLIST_FILE = "Mar-iguana Tours/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mar-iguana.tours";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dianamv.tours;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -505,14 +533,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BZ84JAS22T;
+				DEVELOPMENT_TEAM = KULQ32KAR6;
 				INFOPLIST_FILE = "Mar-iguana Tours/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mar-iguana.tours";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dianamv.tours;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

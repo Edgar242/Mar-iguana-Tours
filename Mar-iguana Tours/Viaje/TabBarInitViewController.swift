@@ -1,26 +1,25 @@
 //
-//  NavigationControllerProfile.swift
+//  TabBarInitViewController.swift
 //  Mar-iguana Tours
 //
-//  Created by Edgar on 18/03/21.
+//  Created by Diana Morales on 02/07/21.
 //
 
 import UIKit
-import FirebaseAuth
 
-class NavigationControllerProfile: UINavigationController {
+class TabBarInitViewController:UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
-        
-        if Auth.auth().currentUser != nil {
-            Utilities.switchRootController(navController: self, Constants.Storyboard.vcProfile)
-            return
-        }
-        Utilities.switchRootController(navController: self, Constants.Storyboard.vcLoginOrRegister)
-        return
+    }
+    
+    //Tab bar item
+    override func viewDidLayoutSubviews() {
+        tabBar.tintColor = ColorUtils.hexStringToUIColor(hex: "#39985E")
+        tabBar.barTintColor = UIColor.white
+        super.viewDidLayoutSubviews()
     }
 
     /*
