@@ -8,6 +8,12 @@
 import UIKit
 import StepView
 
+let pageTitles = ["Escoge tus asientos:",
+                  "Selecciona una promoción",
+                  "Seleciona medio de pago",
+                  "Sube tu comprobante",
+                ]
+
 class ViewControllerBookStep: UIViewController {
     @IBOutlet private weak var stepView: StepView!
     @IBOutlet private weak var containerView: UIView!
@@ -41,7 +47,7 @@ class ViewControllerBookStep: UIViewController {
         containerView.addSubview(pageViewController.view)
 
         if let firstController = pages.first {
-            stepTitle.text = "Step #\(stepView.selectedStep)"
+            stepTitle.text = pageTitles[stepView.selectedStep-1]
             pageViewController.setViewControllers([firstController], direction: .forward, animated: true, completion: nil)
         }
     }
@@ -52,7 +58,7 @@ class ViewControllerBookStep: UIViewController {
 
     private func getControllerToShow(from index: Int) -> UIViewController? {
         if index - 1 < pages.count {
-            stepTitle.text = "Step #\(stepView.selectedStep)"
+            stepTitle.text = pageTitles[stepView.selectedStep-1]
             return pages[index - 1]
         }
         else {
