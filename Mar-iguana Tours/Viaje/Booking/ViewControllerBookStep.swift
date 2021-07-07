@@ -8,9 +8,9 @@
 import UIKit
 import StepView
 
-let pageTitles = ["Escoge tus asientos:",
+let pageTitles = ["Escoge tus asientos",
                   "Selecciona una promoción",
-                  "Seleciona medio de pago",
+                  "Seleciona el medio de pago",
                   "Sube tu comprobante",
                 ]
 
