@@ -16,7 +16,7 @@ class ViewControllerProfile: UIViewController {
     @IBOutlet weak var telefonoLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var sexoLabel: UILabel!
-    @IBOutlet weak var passwdLabel: UILabel!
+    @IBOutlet weak var viajesLabel: UILabel!
     
     @IBOutlet weak var salirButton: UIButton!
         
@@ -50,7 +50,7 @@ class ViewControllerProfile: UIViewController {
         //Forma redondeada de imagen
         userPhoto.layer.cornerRadius = userPhoto.bounds.size.width/2.0
         userPhoto.layer.borderWidth = 1.0
-       
+
         
         //Aqui tendría que recuperar los datos del usuario y asignarlos
         //a cada propiedad cuando se llegue a esta vista de un origen
@@ -78,8 +78,21 @@ class ViewControllerProfile: UIViewController {
             self.sexoLabel.text = gender
         }
         
+        userDB.child("viajes").observeSingleEvent(of: .value){
+            (snapshot) in
+            
+            guard let viajes = snapshot.value as? NSArray else {return}
+            var travelHistory = ""
+            for viaje in viajes{
+                if let travel = viaje as? NSDictionary{
+                    travelHistory += travel["title"] as? String ?? ""
+                    travelHistory += "\n"
+                }
+            }
+            self.viajesLabel.text = travelHistory
+        }
+        
         emailLabel.text = Auth.auth().currentUser?.email
-        passwdLabel.text = "********"
         
         //Si no se encuentra imagen asigna la de default
         userPhoto.image = UIImage(named: "imgUserDefault")
