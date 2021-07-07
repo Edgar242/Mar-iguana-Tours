@@ -25,6 +25,7 @@ class SeatConfig: ALBusSeatViewConfig {
         seatRemoveImage = UIImage(named: "iconRemoveButton")
         floorSeperatorWidth = 60
         centerHallInfoText = "¡Deslizar hacia los lados!"
+        centerHallInfoTextColor = UIColor.label
         centerHallHeight = 40
         tooltipText = "Selecciona el genéro"
     }
