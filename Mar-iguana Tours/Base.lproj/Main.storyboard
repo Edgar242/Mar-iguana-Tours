@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g0y-9p-8bn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4i2-bj-ufh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -335,17 +335,17 @@
                         <viewLayoutGuide key="safeArea" id="DGI-ks-Uxr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="2y7-TD-p4V" firstAttribute="trailing" secondItem="Jsz-5u-ZP1" secondAttribute="trailing" id="13o-xR-lkR"/>
                             <constraint firstItem="DGI-ks-Uxr" firstAttribute="trailing" secondItem="zvf-Mg-lUD" secondAttribute="trailing" constant="20" id="1jG-lF-XZN"/>
                             <constraint firstItem="tU7-HM-no2" firstAttribute="leading" secondItem="DGI-ks-Uxr" secondAttribute="leading" constant="20" id="3ww-Wv-6l3"/>
                             <constraint firstItem="DGI-ks-Uxr" firstAttribute="bottom" secondItem="tU7-HM-no2" secondAttribute="bottom" constant="10" id="HPy-1e-Ypi"/>
-                            <constraint firstItem="2y7-TD-p4V" firstAttribute="leading" secondItem="DGI-ks-Uxr" secondAttribute="leading" id="K0L-iY-fmE"/>
-                            <constraint firstItem="DGI-ks-Uxr" firstAttribute="trailing" secondItem="2y7-TD-p4V" secondAttribute="trailing" id="Ksd-R3-qHq"/>
+                            <constraint firstItem="2y7-TD-p4V" firstAttribute="top" secondItem="wXl-K1-v4r" secondAttribute="bottom" constant="9" id="Rq7-ce-lUu"/>
+                            <constraint firstItem="2y7-TD-p4V" firstAttribute="leading" secondItem="Jsz-5u-ZP1" secondAttribute="leading" id="TZf-q6-wJr"/>
                             <constraint firstItem="wXl-K1-v4r" firstAttribute="top" secondItem="Jsz-5u-ZP1" secondAttribute="bottom" constant="10" id="Tqc-te-f8P"/>
-                            <constraint firstItem="2y7-TD-p4V" firstAttribute="top" secondItem="Jsz-5u-ZP1" secondAttribute="bottom" constant="40" id="VwG-43-lRg"/>
+                            <constraint firstItem="zvf-Mg-lUD" firstAttribute="top" secondItem="2y7-TD-p4V" secondAttribute="bottom" constant="10" id="aNj-MM-t3w"/>
                             <constraint firstItem="DGI-ks-Uxr" firstAttribute="bottom" secondItem="zvf-Mg-lUD" secondAttribute="bottom" constant="10" id="c9b-KZ-A4j"/>
                             <constraint firstItem="Jsz-5u-ZP1" firstAttribute="leading" secondItem="DGI-ks-Uxr" secondAttribute="leading" id="cdx-TB-f8m"/>
                             <constraint firstItem="DGI-ks-Uxr" firstAttribute="trailing" secondItem="Jsz-5u-ZP1" secondAttribute="trailing" id="nMe-PY-wvy"/>
-                            <constraint firstItem="zvf-Mg-lUD" firstAttribute="top" secondItem="2y7-TD-p4V" secondAttribute="bottom" constant="10" id="rPg-zE-VHm"/>
                             <constraint firstItem="DGI-ks-Uxr" firstAttribute="trailing" secondItem="wXl-K1-v4r" secondAttribute="trailing" constant="20" id="tX5-eG-YgJ"/>
                             <constraint firstItem="Jsz-5u-ZP1" firstAttribute="top" secondItem="DGI-ks-Uxr" secondAttribute="top" id="yOr-pM-gVO"/>
                             <constraint firstItem="wXl-K1-v4r" firstAttribute="leading" secondItem="DGI-ks-Uxr" secondAttribute="leading" constant="20" id="z78-U0-TBJ"/>
@@ -367,12 +367,23 @@
         <scene sceneID="lsj-9d-xPU">
             <objects>
                 <viewController storyboardIdentifier="ViewControllerStep1" id="G74-tE-mDz" customClass="ViewControllerStep1" customModule="Mar_iguana_Tours" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7NL-mB-Jfo">
+                    <view key="view" contentMode="scaleToFill" id="7NL-mB-Jfo" customClass="ALBusSeatView" customModule="ALBusSeatView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="MVE-SG-Y59" customClass="ALBusSeatView" customModule="ALBusSeatView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <viewLayoutGuide key="safeArea" id="dfi-V2-qnp"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="daK-jW-jBH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="seatView" destination="7NL-mB-Jfo" id="Pd5-N0-x1P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOd-mk-OKQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
