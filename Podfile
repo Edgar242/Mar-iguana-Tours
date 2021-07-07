@@ -10,7 +10,7 @@ target 'Mar-iguana Tours' do
   pod 'Firebase/Analytics', '~> 7.2'
   pod 'Firebase/Auth', '~> 7.2'
   pod 'Firebase/Database', '~> 7.2'
-  # or pod ‘Firebase/AnalyticsWithoutAdIdSupport’
+  # or pod 'Firebase/AnalyticsWithoutAdIdSupport'
   # for Analytics without IDFA collection capability
 
   # add pods for any other desired Firebase products
@@ -19,5 +19,6 @@ target 'Mar-iguana Tours' do
   pod 'Alamofire', '~> 5.4'
 
   pod 'StepView'
+  pod 'ALBusSeatView'
 
 end
