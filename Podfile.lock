@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.4.3)
+  - ALBusSeatView (0.2.5)
   - Firebase/Analytics (7.11.0):
     - Firebase/Core
   - Firebase/Auth (7.11.0):
@@ -103,6 +104,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.4)
+  - ALBusSeatView
   - Firebase/Analytics (~> 7.2)
   - Firebase/Auth (~> 7.2)
   - Firebase/Database (~> 7.2)
@@ -112,6 +114,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - ALBusSeatView
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -130,6 +133,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  ALBusSeatView: 5416cf8e3d0d8d993da5f726f92cbb425463efd2
   Firebase: c121feb35e4126c0b355e3313fa9b487d47319fd
   FirebaseAnalytics: cd3bd84d722a24a8923918af8af8e5236f615d77
   FirebaseAuth: 5fe4585c2ed847319f0ea68bd1d82c77e49ff9a0
@@ -146,6 +150,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   StepView: e69413ca377b42c5777d446854bb036ff8e988fd
 
-PODFILE CHECKSUM: 7b398df533a7ce692663e2d1053c94ce2c86e1e6
+PODFILE CHECKSUM: 376730aee974888a295e86b964ebf66ab5c0e0a3
 
 COCOAPODS: 1.10.1

@@ -6,14 +6,34 @@
 //
 
 import UIKit
+import ALBusSeatView
 
 class ViewControllerStep1: UIViewController {
 
+    @IBOutlet weak var seatView: ALBusSeatView!
+    var dataManager = SeatDataManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
-        // Do any additional setup after loading the view.
+        seatView.config = SeatConfig()
+        seatView.delegate = dataManager
+        seatView.dataSource = dataManager
+
+        let mock = MockSeatCreater()
+        
+        // First Passanger Bus
+        let first = mock.create(count: 45)
+        
+        // Second Passanger Bus
+        // let second = mock.create(count: 40)
+        
+        dataManager.seatList = [first]
+        seatView?.reload()
     }
+
+
     
 
     /*
