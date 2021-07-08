@@ -20,11 +20,11 @@ class SeatConfig: ALBusSeatViewConfig {
         
         seatShadowColor = UIColor(red: 146.0 / 255.0, green: 184.0 / 255.0, blue: 202.0 / 255.0, alpha: 0.5)
         busFrontImage = UIImage(named: "bus-front-view")
-        busFrontImageWidth = 150
+        busFrontImageWidth = 130
         floorSeperatorImage = UIImage(named: "bus-docker-front-view")
         seatRemoveImage = UIImage(named: "iconRemoveButton")
         floorSeperatorWidth = 60
-        centerHallInfoText = "¡Deslizar hacia los lados!"
+        centerHallInfoText = "¡Desliza hacia los lados!"
         centerHallInfoTextColor = UIColor.label
         centerHallHeight = 40
         tooltipText = "Selecciona el genéro"

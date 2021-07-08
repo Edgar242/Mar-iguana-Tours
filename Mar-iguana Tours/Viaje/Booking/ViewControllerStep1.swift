@@ -11,6 +11,7 @@ import ALBusSeatView
 class ViewControllerStep1: UIViewController {
 
     @IBOutlet weak var seatView: ALBusSeatView!
+    @IBOutlet weak var seatCount: UILabel!
     var dataManager = SeatDataManager()
     
     override func viewDidLoad() {
@@ -23,13 +24,14 @@ class ViewControllerStep1: UIViewController {
 
         let mock = MockSeatCreater()
         
-        // First Passanger Bus
+        // First Passenger Bus
         let first = mock.create(count: 45)
         
-        // Second Passanger Bus
+        // Second Passenger Bus
         // let second = mock.create(count: 40)
         
         dataManager.seatList = [first]
+        seatCount.text = "Asientos seleccionados: \(dataManager.selectedSeatlist.count)"
         seatView?.reload()
     }
 
