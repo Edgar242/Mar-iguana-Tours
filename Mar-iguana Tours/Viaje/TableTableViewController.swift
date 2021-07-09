@@ -56,11 +56,12 @@ class TableTableViewController: UITableViewController {
         let elKiu = DispatchQueue (label: "NetworkMonitor")
         monitor.start(queue: elKiu)
       
-        //Navigator item 
+        //Navigation bar
         navigationController?.navigationBar.barTintColor = ColorUtils.hexStringToUIColor(hex: "#39985E")
-        self.navigationItem.hidesBackButton = true
-        
-        navigationController?.navigationBar.titleTextAttributes = [ NSAttributedString.Key.foregroundColor : UIColor.white ]
+        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+
         
         print(">>>> Entra a will appear")
         let nib = UINib(nibName: "TableViewCell", bundle: nil)

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g0y-9p-8bn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g0y-9p-8bn">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -123,6 +123,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b9b-iB-jIa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4386.9565217391309" y="-510.26785714285711"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ESP-5i-Yd5">
+            <objects>
+                <viewController id="lp3-Jg-rp2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="57U-dy-RDY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1V-Dh-ELd">
+                                <rect key="frame" x="141" y="250" width="78" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <state key="normal" title="Button" image="cart.fill.badge.plus" catalog="system"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="20v-R4-xt9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="itt-Cm-z88" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5268" y="-340"/>
         </scene>
         <!--INFORMACIÓN-->
         <scene sceneID="knZ-6z-sol">
@@ -283,6 +308,7 @@
                     <connections>
                         <segue destination="XQh-wM-Mj7" kind="relationship" relationship="viewControllers" id="VMa-bq-pSc"/>
                         <segue destination="ltA-dQ-v53" kind="relationship" relationship="viewControllers" id="9dM-A4-MqU"/>
+                        <segue destination="4i2-bj-ufh" kind="show" identifier="steperSegue" id="bOh-sN-Fg4"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P0C-y1-ogs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -298,10 +324,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2y7-TD-p4V">
-                                <rect key="frame" x="0.0" y="152" width="414" height="660"/>
+                                <rect key="frame" x="0.0" y="196" width="414" height="567"/>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jsz-5u-ZP1" customClass="StepView" customModule="StepView">
-                                <rect key="frame" x="0.0" y="44" width="414" height="68"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="68"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68" id="kgZ-BQ-grQ"/>
@@ -343,21 +369,21 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvf-Mg-lUD" userLabel="Next Button">
-                                <rect key="frame" x="330" y="822" width="64" height="30"/>
+                                <rect key="frame" x="330" y="773" width="64" height="30"/>
                                 <state key="normal" title="Siguiente"/>
                                 <connections>
                                     <action selector="nextButtonDidPress:" destination="4i2-bj-ufh" eventType="touchUpInside" id="HXj-93-dyY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tU7-HM-no2">
-                                <rect key="frame" x="20" y="822" width="36" height="30"/>
+                                <rect key="frame" x="20" y="773" width="36" height="30"/>
                                 <state key="normal" title="Atrás"/>
                                 <connections>
                                     <action selector="backButtonDidPress:" destination="4i2-bj-ufh" eventType="touchUpInside" id="ycg-Ic-ZMz"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXl-K1-v4r">
-                                <rect key="frame" x="20" y="122" width="374" height="21"/>
+                                <rect key="frame" x="20" y="166" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -385,6 +411,7 @@
                             <constraint firstItem="DGI-ks-Uxr" firstAttribute="bottom" secondItem="tU7-HM-no2" secondAttribute="bottom" constant="10" id="zh0-tR-YoQ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="P5j-UC-8N3"/>
                     <connections>
                         <outlet property="backButton" destination="tU7-HM-no2" id="xUP-0F-nKf"/>
                         <outlet property="containerView" destination="2y7-TD-p4V" id="7Ez-M8-YD2"/>
@@ -1211,6 +1238,7 @@ El usuario acepta recibir notificaciones de publicidad de viajes con ofertas y p
         </scene>
     </scenes>
     <resources>
+        <image name="cart.fill.badge.plus" catalog="system" width="128" height="106"/>
         <image name="map.fill" catalog="system" width="128" height="110"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="safari.fill" catalog="system" width="128" height="121"/>

@@ -21,4 +21,6 @@ target 'Mar-iguana Tours' do
   pod 'StepView'
   pod 'ALBusSeatView'
 
+  pod 'MaterialComponents/Buttons'
+
 end

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MaterialComponents.MaterialButtons
 
 class TourDetailViewController:UITabBarController{
     
@@ -61,9 +62,7 @@ class TourDetailViewController:UITabBarController{
         let fontAtt = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16.0, weight: UIFont.Weight.bold )]
         UITabBarItem.appearance().setTitleTextAttributes(fontAtt, for: .normal)
         
-        //Navigator item
-        self.navigationItem.hidesBackButton = true
-        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         //Pass info to view controller in the tabbar
         let infoTourController = self.viewControllers![0] as! TourInfoViewController
@@ -71,6 +70,8 @@ class TourDetailViewController:UITabBarController{
         
         infoTourController.tourSelected = tourSelected
         itineraryController.itinerary = tourSelected!.itinerary
+        
+        setFloatingButton()
     }
     
     //Tab bar item
@@ -96,6 +97,32 @@ class TourDetailViewController:UITabBarController{
             self.sliderCollectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: false)
             pageView.currentPage = counter
             counter = 1
+        }
+    }
+    
+    func setFloatingButton() {
+        let floatingButton = MDCFloatingButton()
+        let image = UIImage(systemName: "cart.fill.badge.plus")
+        floatingButton.sizeToFit()
+        floatingButton.translatesAutoresizingMaskIntoConstraints = false
+        floatingButton.setImage(image, for: .normal)
+        floatingButton.setImageTintColor(.white, for: .normal)
+        floatingButton.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#39985E")
+        floatingButton.addTarget(self, action: #selector(tap), for: .touchUpInside)
+        view.addSubview(floatingButton)
+        view.addConstraint(NSLayoutConstraint(item: floatingButton, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: -64))
+        view.addConstraint(NSLayoutConstraint(item: floatingButton, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1.0, constant: -32))
+    }
+        
+    @objc func tap(_ sender: Any) {
+        performSegue(withIdentifier: "steperSegue", sender: "")
+    }
+        
+    //Prepare segue to pass selected tour info to DetailTourControllerView
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "steperSegue") {
+            let td = segue.destination as! ViewControllerBookStep
+            td.tourSelected = tourSelected
         }
     }
 }

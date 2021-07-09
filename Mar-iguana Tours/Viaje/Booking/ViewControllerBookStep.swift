@@ -15,6 +15,8 @@ let pageTitles = ["Escoge tus asientos",
                 ]
 
 class ViewControllerBookStep: UIViewController {
+    var tourSelected:Tour?
+    
     @IBOutlet private weak var stepView: StepView!
     @IBOutlet private weak var containerView: UIView!
     @IBOutlet private weak var nextButton: UIButton!
