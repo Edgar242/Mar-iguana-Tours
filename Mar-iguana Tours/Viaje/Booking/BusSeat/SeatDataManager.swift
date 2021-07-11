@@ -13,7 +13,6 @@ class SeatDataManager {
     var selectedSeatlist = [SeatStub]()
 }
 
-
 extension SeatDataManager: ALBusSeatViewDelegate {
     
     func seatView(_ seatView: ALBusSeatView,
@@ -23,6 +22,10 @@ extension SeatDataManager: ALBusSeatViewDelegate {
         var stub = seatList[indexPath.section][indexPath.item]
         stub.gender = selectionType == .man ? true : false
         selectedSeatlist.append(stub)
+        NotificationCenter.default.post(
+            name: notificationSeatChanged,
+            object: selectedSeatlist.count
+        )
         seatView.reload()
     }
     
@@ -32,6 +35,10 @@ extension SeatDataManager: ALBusSeatViewDelegate {
         
         let stub = seatList[indexPath.section][indexPath.item]
         selectedSeatlist.removeAll(where: { $0.id == stub.id })
+        NotificationCenter.default.post(
+            name: notificationSeatChanged,
+            object: selectedSeatlist.count
+        )
         seatView.reload()
     }
 }

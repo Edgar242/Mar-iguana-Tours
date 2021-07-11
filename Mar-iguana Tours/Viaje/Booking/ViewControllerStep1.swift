@@ -17,22 +17,35 @@ class ViewControllerStep1: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        setupBusSeat()
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(updateSeatNumberBooked(Notification:)),
+            name: Notification.Name(rawValue: "asientoModificado"),
+            object: nil
+        )
+    }
+    
+    func setupBusSeat() {
         seatView.config = SeatConfig()
         seatView.delegate = dataManager
         seatView.dataSource = dataManager
 
         let mock = MockSeatCreater()
         
-        // First Passenger Bus
-        let first = mock.create(count: 45)
+        // Define the quantity of seats for each passenger bus
+        let firstBus = mock.create(count: 45)
+        // let secondBus = mock.create(count: 40)
         
-        // Second Passenger Bus
-        // let second = mock.create(count: 40)
-        
-        dataManager.seatList = [first]
+        // Set the passegenr bus to the list
+        dataManager.seatList = [firstBus]
         seatCount.text = "Asientos seleccionados: \(dataManager.selectedSeatlist.count)"
         seatView?.reload()
+    }
+    
+    @objc func updateSeatNumberBooked(Notification: NSNotification) {
+        seatCount.text = "Asientos seleccionados: \(dataManager.selectedSeatlist.count)"
     }
 
 

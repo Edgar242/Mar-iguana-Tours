@@ -16,6 +16,7 @@ let pageTitles = ["Escoge tus asientos",
 
 //Global variable with the selected tour
 var selectedTour: Tour = Tour(id: 1, title: "title",price: 100, dates:["dates"], rating: 5, images: ["images"], info: "info", itinerary: ["itinerary"],promo: " promo", roomOptions: ["roomOptions"],urlInfoWeb: "urlInfoWeb")
+let notificationSeatChanged = Notification.Name(rawValue: "asientoModificado")
 
 class ViewControllerBookStep: UIViewController {
     var tourSelected:Tour? //gotten by the segue
@@ -43,8 +44,19 @@ class ViewControllerBookStep: UIViewController {
 //        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "arrowBack"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(backButtonDidPress))
         
         setupControllers()
+        
+        // Add observer
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(enableNextButton(notification:)),
+            name: notificationSeatChanged ,
+            object: nil
+        )
     }
     
+    @objc func enableNextButton(notification: NSNotification) {
+        nextButton.isEnabled = notification.object as! Int > 0
+    }
 
     private func setupControllers() {
         pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
