@@ -16,8 +16,8 @@ let pageTitles = ["Escoge tus asientos",
 
 //Global variable with the selected tour
 var selectedTour: Tour = Tour(id: 1, title: "title",price: 100, dates:["dates"], rating: 5, images: ["images"], info: "info", itinerary: ["itinerary"],promo: " promo", roomOptions: ["roomOptions"],urlInfoWeb: "urlInfoWeb")
-let notificationSeatChanged = Notification.Name(rawValue: "asientoModificado")
-var seatsBooked = [Int]()
+let notificationBookedSeatDidChange = Notification.Name(rawValue: "asientoModificado")
+var seatsBooked = [Int]() // Used to track, the number of booked seats as well as quantity
 
 class ViewControllerBookStep: UIViewController {
     var tourSelected:Tour? //gotten by the segue
@@ -42,6 +42,7 @@ class ViewControllerBookStep: UIViewController {
         selectedTour = tourSelected ?? selectedTour //global variable recives segue tourSelected
         super.viewDidLoad()
         
+        setupViewControllSteps()
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(
             image: UIImage(named: "arrowBack"),
@@ -51,13 +52,13 @@ class ViewControllerBookStep: UIViewController {
             action: #selector(backButtonDidPress)
         )
         
-        setupControllers()
+        navigationItem.rightBarButtonItem?.title = "Siguiente"
         
         // Add observer
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(enableNextButton(notification:)),
-            name: notificationSeatChanged ,
+            name: notificationBookedSeatDidChange ,
             object: nil
         )
     }
@@ -66,7 +67,7 @@ class ViewControllerBookStep: UIViewController {
         nextButton.isEnabled = seatsBooked.count > 0
     }
 
-    private func setupControllers() {
+    private func setupViewControllSteps() {
         pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         pageViewController.view.frame = containerView.bounds
         containerView.addSubview(pageViewController.view)
@@ -111,7 +112,7 @@ class ViewControllerBookStep: UIViewController {
         else {
             stepView.showPreviousStep()
             
-            // Disable back button if we are in first page
+            // Hide bottom back button if we are in the first page
             if stepView.selectedStep == 1 {
                 backButton.isHidden = true
             }

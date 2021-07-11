@@ -24,7 +24,7 @@ extension SeatDataManager: ALBusSeatViewDelegate {
         selectedSeatlist.append(stub)
         seatsBooked.append(stub.number)
         NotificationCenter.default.post(
-            name: notificationSeatChanged,
+            name: notificationBookedSeatDidChange,
             object: nil
         )
         seatView.reload()
@@ -38,7 +38,7 @@ extension SeatDataManager: ALBusSeatViewDelegate {
         selectedSeatlist.removeAll(where: { $0.id == stub.id })
         seatsBooked.removeAll(where: { $0 == stub.number})
         NotificationCenter.default.post(
-            name: notificationSeatChanged,
+            name: notificationBookedSeatDidChange,
             object: nil
         )
         seatView.reload()

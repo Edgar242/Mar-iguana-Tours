@@ -22,7 +22,7 @@ class ViewControllerStep1: UIViewController {
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(updateSeatNumberBooked(Notification:)),
-            name: Notification.Name(rawValue: "asientoModificado"),
+            name: notificationBookedSeatDidChange,
             object: nil
         )
     }
