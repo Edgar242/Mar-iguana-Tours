@@ -27,7 +27,7 @@ class SeatConfig: ALBusSeatViewConfig {
         centerHallInfoText = "¡Desliza hacia los lados!"
         centerHallInfoTextColor = UIColor.label
         centerHallHeight = 40
-        tooltipText = "Selecciona el genéro"
+        tooltipText = "Reservar"
     }
     
 }
