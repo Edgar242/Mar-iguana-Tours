@@ -40,12 +40,12 @@ class ViewControllerStep1: UIViewController {
         
         // Set the passegenr bus to the list
         dataManager.seatList = [firstBus]
-        seatCount.text = "Asientos seleccionados: \(dataManager.selectedSeatlist.count)"
+        seatCount.text = "Asientos seleccionados: \(seatsBooked.count)"
         seatView?.reload()
     }
     
     @objc func updateSeatNumberBooked(Notification: NSNotification) {
-        seatCount.text = "Asientos seleccionados: \(dataManager.selectedSeatlist.count)"
+        seatCount.text = "Asientos seleccionados: \(seatsBooked.count)"
     }
 
 

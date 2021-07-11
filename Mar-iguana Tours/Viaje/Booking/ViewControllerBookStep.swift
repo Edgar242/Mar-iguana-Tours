@@ -9,14 +9,15 @@ import UIKit
 import StepView
 
 let pageTitles = ["Escoge tus asientos",
-                  "Selecciona una promoción",
-                  "Seleciona el medio de pago",
+                  "Selecciona promoción",
+                  "Escoge medio de pago",
                   "Sube tu comprobante",
                 ]
 
 //Global variable with the selected tour
 var selectedTour: Tour = Tour(id: 1, title: "title",price: 100, dates:["dates"], rating: 5, images: ["images"], info: "info", itinerary: ["itinerary"],promo: " promo", roomOptions: ["roomOptions"],urlInfoWeb: "urlInfoWeb")
 let notificationSeatChanged = Notification.Name(rawValue: "asientoModificado")
+var seatsBooked = [Int]()
 
 class ViewControllerBookStep: UIViewController {
     var tourSelected:Tour? //gotten by the segue
@@ -24,7 +25,6 @@ class ViewControllerBookStep: UIViewController {
     @IBOutlet private weak var containerView: UIView!
     @IBOutlet private weak var nextButton: UIButton!
     @IBOutlet private weak var backButton: UIButton!
-    @IBOutlet private weak var stepTitle: UILabel!
     
 
     private var pageViewController: UIPageViewController!
@@ -41,7 +41,15 @@ class ViewControllerBookStep: UIViewController {
     override func viewDidLoad() {
         selectedTour = tourSelected ?? selectedTour //global variable recives segue tourSelected
         super.viewDidLoad()
-//        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "arrowBack"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(backButtonDidPress))
+        
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: UIImage(named: "arrowBack"),
+            landscapeImagePhone: nil,
+            style: .plain,
+            target: self,
+            action: #selector(backButtonDidPress)
+        )
         
         setupControllers()
         
@@ -55,7 +63,7 @@ class ViewControllerBookStep: UIViewController {
     }
     
     @objc func enableNextButton(notification: NSNotification) {
-        nextButton.isEnabled = notification.object as! Int > 0
+        nextButton.isEnabled = seatsBooked.count > 0
     }
 
     private func setupControllers() {
@@ -64,7 +72,7 @@ class ViewControllerBookStep: UIViewController {
         containerView.addSubview(pageViewController.view)
 
         if let firstController = pages.first {
-            stepTitle.text = pageTitles[stepView.selectedStep-1]
+            navigationItem.title = pageTitles[stepView.selectedStep-1]
             pageViewController.setViewControllers([firstController], direction: .forward, animated: true, completion: nil)
         }
         // Hide back button in first page
@@ -77,7 +85,7 @@ class ViewControllerBookStep: UIViewController {
 
     private func getControllerToShow(from index: Int) -> UIViewController? {
         if index - 1 < pages.count {
-            stepTitle.text = pageTitles[stepView.selectedStep-1]
+            navigationItem.title = pageTitles[stepView.selectedStep-1]
             return pages[index - 1]
         }
         else {
