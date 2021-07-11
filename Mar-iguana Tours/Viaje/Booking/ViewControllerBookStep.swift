@@ -67,6 +67,8 @@ class ViewControllerBookStep: UIViewController {
             stepTitle.text = pageTitles[stepView.selectedStep-1]
             pageViewController.setViewControllers([firstController], direction: .forward, animated: true, completion: nil)
         }
+        // Hide back button in first page
+        backButton.isHidden = true
     }
 
     fileprivate func getViewController(withIdentifier identifier: String) -> UIViewController {
@@ -87,6 +89,7 @@ class ViewControllerBookStep: UIViewController {
     @IBAction func nextButtonDidPress(_ sender: Any) {
         stepView.showNextStep()
         backButton.isEnabled = true
+        backButton.isHidden = false
 
         if let controllerToShow = getControllerToShow(from: stepView.selectedStep) {
             pageViewController.setViewControllers([controllerToShow], direction: .forward, animated: true, completion: nil)
@@ -102,7 +105,7 @@ class ViewControllerBookStep: UIViewController {
             
             // Disable back button if we are in first page
             if stepView.selectedStep == 1 {
-                backButton.isEnabled = false
+                backButton.isHidden = true
             }
             
             if let controllerToShow = getControllerToShow(from: stepView.selectedStep) {
