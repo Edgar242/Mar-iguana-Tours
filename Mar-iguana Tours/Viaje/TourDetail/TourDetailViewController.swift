@@ -72,6 +72,23 @@ class TourDetailViewController:UITabBarController{
         itineraryController.itinerary = tourSelected!.itinerary
         
         setFloatingButton()
+        
+        //Share button
+        let btnShare = UIBarButtonItem(barButtonSystemItem:.action, target: self, action: #selector(btnShare_clicked))
+        
+        self.navigationItem.rightBarButtonItem = btnShare
+    }
+    
+    @objc func btnShare_clicked(){
+        let textToShare = tourSelected?.title
+
+        if let myWebsite = NSURL(string:tourSelected!.urlInfoWeb) {
+            let objectsToShare: [Any] = [textToShare!, myWebsite]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+
+            activityVC.popoverPresentationController?.sourceView = self.view
+            self.present(activityVC, animated: true, completion: nil)
+        }
     }
     
     //Tab bar item
@@ -110,7 +127,7 @@ class TourDetailViewController:UITabBarController{
         floatingButton.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#39985E")
         floatingButton.addTarget(self, action: #selector(tap), for: .touchUpInside)
         view.addSubview(floatingButton)
-        view.addConstraint(NSLayoutConstraint(item: floatingButton, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: -64))
+        view.addConstraint(NSLayoutConstraint(item: floatingButton, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: -85))
         view.addConstraint(NSLayoutConstraint(item: floatingButton, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1.0, constant: -32))
     }
         

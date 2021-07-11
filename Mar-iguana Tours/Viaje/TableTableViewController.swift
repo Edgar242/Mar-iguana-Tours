@@ -83,7 +83,7 @@ class TableTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return viajes.count
+        return arrTours.count
     }
 
     
@@ -117,7 +117,7 @@ class TableTableViewController: UITableViewController {
     }
  
     func downloadInfo () {
-        let urlStr = "https://demo9091260.mockable.io/tours"
+        let urlStr = "https://demo4386931.mockable.io/tours"
         AF.request (urlStr, method: .get).validate().responseJSON {response in
             if let jsonTours = response.value as? [[String:Any]] {
                 for tour in jsonTours {
