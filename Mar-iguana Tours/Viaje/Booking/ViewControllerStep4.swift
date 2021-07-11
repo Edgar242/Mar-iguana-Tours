@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class ViewControllerStep4: UIViewController {
     
@@ -13,12 +15,20 @@ class ViewControllerStep4: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
+    
+    
     
     //Take photo with camera
     @IBAction func takePhotoAction(_ sender: AnyObject) {
+        let uID = Auth.auth().currentUser?.uid
+        let dbReference = Database.database().reference().child("User")
+        let userDB = dbReference.child(uID ?? "undefinedUser")
+        
+        let viaje = userDB.child("viajes").child(String(selectedTour.id))
+        viaje.child("status").setValue("verificando")
+        viaje.child("title").setValue(selectedTour.title)
+        
         //If camera is available
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             if UIImagePickerController.availableCaptureModes(for: .rear) != nil {
