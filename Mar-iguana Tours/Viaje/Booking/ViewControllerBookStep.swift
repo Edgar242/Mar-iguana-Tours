@@ -14,9 +14,11 @@ let pageTitles = ["Escoge tus asientos",
                   "Sube tu comprobante",
                 ]
 
+//Global variable with the selected tour
+var selectedTour: Tour = Tour(id: 1, title: "title",price: 100, dates:["dates"], rating: 5, images: ["images"], info: "info", itinerary: ["itinerary"],promo: " promo", roomOptions: ["roomOptions"],urlInfoWeb: "urlInfoWeb")
+
 class ViewControllerBookStep: UIViewController {
-    var tourSelected:Tour?
-    
+    var tourSelected:Tour? //gotten by the segue
     @IBOutlet private weak var stepView: StepView!
     @IBOutlet private weak var containerView: UIView!
     @IBOutlet private weak var nextButton: UIButton!
@@ -36,6 +38,7 @@ class ViewControllerBookStep: UIViewController {
     }()
     
     override func viewDidLoad() {
+        selectedTour = tourSelected ?? selectedTour //global variable recives segue tourSelected
         super.viewDidLoad()
 //        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "arrowBack"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(backButtonDidPress))
         
