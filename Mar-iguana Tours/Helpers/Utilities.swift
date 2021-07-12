@@ -29,4 +29,10 @@ class Utilities {
         context.present(ac, animated:true)
     }
     
+    static func setMyThemeColors(navigationController: UINavigationController?) {
+        // Set Theme colors
+        navigationController?.navigationBar.barTintColor = UIColor(named: "myPrimaryColor")
+        navigationController?.navigationBar.tintColor = UIColor.white
+    }
+    
 }

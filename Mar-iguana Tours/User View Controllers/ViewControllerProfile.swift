@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 class ViewControllerProfile: UIViewController {
 
@@ -14,8 +16,7 @@ class ViewControllerProfile: UIViewController {
     @IBOutlet weak var telefonoLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var sexoLabel: UILabel!
-    @IBOutlet weak var fechaNacLabel: UILabel!
-    @IBOutlet weak var passwdLabel: UILabel!
+    @IBOutlet weak var viajesLabel: UILabel!
     
     @IBOutlet weak var salirButton: UIButton!
         
@@ -25,52 +26,78 @@ class ViewControllerProfile: UIViewController {
     var telefonoPropertie:String = ""
     var emailPropertie:String = ""
     var sexoPropertie:String = ""
-    var fechaNacPropertie:String = ""
     var passwdPropertie:String = ""
     
     @IBAction func onLogOut(_ sender: UIButton) {
-        // Save information of loged user
-        ConfigData.instance.set(key: "userLoggedIn", value: false)
+        
+        do{
+            try
+                Auth.auth().signOut()
+        }catch let error {
+            print(error)
+        }
         
         Utilities.switchRootController(navController: navigationController, Constants.Storyboard.vcLoginOrRegister)
     }
     
+    let uID = Auth.auth().currentUser?.uid
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set theme colors
         FormatUtils.formatButtonEnabled(button: salirButton)
+        Utilities.setMyThemeColors(navigationController: navigationController)
         
         //Forma redondeada de imagen
         userPhoto.layer.cornerRadius = userPhoto.bounds.size.width/2.0
         userPhoto.layer.borderWidth = 1.0
-       
+
         
         //Aqui tendría que recuperar los datos del usuario y asignarlos
         //a cada propiedad cuando se llegue a esta vista de un origen
         //diferente a la vista de registro
         
-        //Asigna los valores de las propiedades a cada etiqueta
-        nombreLabel.text = nombrePropertie
-        telefonoLabel.text = telefonoPropertie
-        emailLabel.text = emailPropertie
-        sexoLabel.text = sexoPropertie
-        fechaNacLabel.text = fechaNacPropertie
-        passwdLabel.text = "********"
+        
+        let dbReference = Database.database().reference().child("User")
+        let userDB = dbReference.child(self.uID ?? "aaaaaa")
+        
+        userDB.child("name").observeSingleEvent(of: .value){
+            (snapshot) in
+            guard let name = snapshot.value as? String else {return}
+            self.nombreLabel.text = name
+        }
+        
+        userDB.child("phone_number").observeSingleEvent(of: .value){
+            (snapshot) in
+            guard let number = snapshot.value as? String else {return}
+            self.telefonoLabel.text = number
+        }
+        
+        userDB.child("gender").observeSingleEvent(of: .value){
+            (snapshot) in
+            guard let gender = snapshot.value as? String else {return}
+            self.sexoLabel.text = gender
+        }
+        
+        userDB.child("viajes").observeSingleEvent(of: .value){
+            (snapshot) in
+            
+            guard let viajes = snapshot.value as? NSArray else {return}
+            var travelHistory = ""
+            for viaje in viajes{
+                if let travel = viaje as? NSDictionary{
+                    travelHistory += travel["title"] as? String ?? ""
+                    travelHistory += "\n"
+                }
+            }
+            self.viajesLabel.text = travelHistory
+        }
+        
+        emailLabel.text = Auth.auth().currentUser?.email
         
         //Si no se encuentra imagen asigna la de default
         userPhoto.image = UIImage(named: "imgUserDefault")
-        
-        loadDataFromConfig()
-    }
-    
-    private func loadDataFromConfig() {
-        nombreLabel.text = ConfigData.instance.get(key: "name") as? String
-        telefonoLabel.text = ConfigData.instance.get(key: "phone") as? String
-        emailLabel.text = ConfigData.instance.get(key: "email") as? String
-        sexoLabel.text = ConfigData.instance.get(key: "genre") as? String
-        fechaNacLabel.text = ConfigData.instance.get(key: "dateOfBirth") as? String
-        // TODO: Use MD5 in password
-//        passwdLabel.text = ConfigData.instance.get(key: "password") as? String
     }
     
     @objc func editar (){

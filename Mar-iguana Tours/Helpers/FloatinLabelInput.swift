@@ -154,8 +154,8 @@ class FloatinLabelInput: UITextField {
             regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
             errorMessage = "Introduce una dirección válida"
         case FloatinLabelInput.tipoPasswd:
-            if((label.text?.count ?? 0) < 8){
-                return "Longitud mínima de 8 caracteres"
+            if((label.text?.count ?? 0) < 6){
+                return "Longitud mínima de 6 caracteres"
             }
         default:
             if label.text == "" {

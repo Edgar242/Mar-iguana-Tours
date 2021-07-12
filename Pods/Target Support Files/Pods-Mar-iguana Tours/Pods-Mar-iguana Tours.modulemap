@@ -1,0 +1,6 @@
+framework module Pods_Mar_iguana_Tours {
+  umbrella header "Pods-Mar-iguana Tours-umbrella.h"
+
+  export *
+  module * { export * }
+}

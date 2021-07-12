@@ -26,7 +26,11 @@ class ConfigData : NSObject {
     }
     
     public func set(key: String, value: Any) {
-        addKeyValue(key: key, value: value)
+        if addKeyValue(key: key, value: value) {
+            print("Key added successfully")
+        } else {
+            print("Error adding Key")
+        }        
     }
     
     
