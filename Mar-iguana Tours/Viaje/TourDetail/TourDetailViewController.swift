@@ -31,7 +31,7 @@ class TourDetailViewController:UITabBarController{
         let lframe = CGRect(x: 0, y: 0, width: view.frame.width, height: 250)
         sliderCollectionView = UICollectionView(frame: lframe, collectionViewLayout: layout)
         sliderCollectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        sliderCollectionView?.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#39985E")
+        sliderCollectionView?.backgroundColor = UIColor(named: "myPrimaryColor")
         sliderCollectionView?.dataSource = self
         sliderCollectionView?.delegate = self
         
@@ -94,7 +94,7 @@ class TourDetailViewController:UITabBarController{
     //Tab bar item
     override func viewDidLayoutSubviews() {
         tabBar.frame = CGRect(x: 0, y: 250, width: tabBar.frame.size.width, height:50)
-        tabBar.tintColor = ColorUtils.hexStringToUIColor(hex: "#39985E")
+        tabBar.tintColor = UIColor(named: "myPrimaryColor")
         super.viewDidLayoutSubviews()
     }
     
@@ -124,7 +124,7 @@ class TourDetailViewController:UITabBarController{
         floatingButton.translatesAutoresizingMaskIntoConstraints = false
         floatingButton.setImage(image, for: .normal)
         floatingButton.setImageTintColor(.white, for: .normal)
-        floatingButton.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#39985E")
+        floatingButton.backgroundColor = UIColor(named: "myPrimaryColor")
         floatingButton.addTarget(self, action: #selector(tap), for: .touchUpInside)
         view.addSubview(floatingButton)
         view.addConstraint(NSLayoutConstraint(item: floatingButton, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: -85))
