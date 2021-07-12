@@ -158,13 +158,13 @@
 			isa = PBXGroup;
 			children = (
 				849134F42689493A00DA0033 /* TourDetail */,
-				6D1EBA522678187A0051D150 /* Booking */,
 				9FBFF9A825F992EE00FA9796 /* Viaje.swift */,
 				9FBFF99C25F81E5300FA9796 /* TableTableViewController.swift */,
 				9FBFF99F25F82CD000FA9796 /* TableViewCell.swift */,
 				9FBFF9A025F82CD000FA9796 /* TableViewCell.xib */,
 				843522E8268E95B500BD4135 /* Tour.swift */,
 				84CBB5FE268F8F3300B6BF57 /* TabBarInitViewController.swift */,
+				6D1EBA522678187A0051D150 /* Booking */,
 			);
 			path = Viaje;
 			sourceTree = "<group>";

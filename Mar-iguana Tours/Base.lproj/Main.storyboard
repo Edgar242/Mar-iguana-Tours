@@ -481,7 +481,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q7e-kP-nex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3567" y="-138"/>
+            <point key="canvasLocation" x="4122" y="315"/>
         </scene>
         <!--View Controller Step2-->
         <scene sceneID="m5e-Ls-sys">
@@ -618,7 +618,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s98-me-3f5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4113" y="317"/>
+            <point key="canvasLocation" x="4855" y="317"/>
         </scene>
         <!--View Controller Step4-->
         <scene sceneID="CPu-1g-Vna">
@@ -629,13 +629,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFW-0J-kbW">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="434" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="lbX-pG-2pM">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="606"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="434" height="606"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z9U-nq-kFF">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="434" height="128"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elige un método de pago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nn6-LV-7nR">
                                                         <rect key="frame" x="8" y="70" width="189.5" height="20.5"/>
@@ -653,28 +653,28 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DPJ-1c-pqA">
-                                                <rect key="frame" x="0.0" y="144" width="414" height="200"/>
+                                                <rect key="frame" x="0.0" y="144" width="434" height="200"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transferencia bancaria" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vr-ir-LoU">
-                                                        <rect key="frame" x="8" y="8" width="398" height="20.5"/>
+                                                        <rect key="frame" x="8" y="8" width="418" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Realiza una transferencia con la cantidad indicada a la siguiente cuenta:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03Z-gR-nBK">
-                                                        <rect key="frame" x="8" y="36.5" width="398" height="41"/>
+                                                        <rect key="frame" x="8" y="36.5" width="418" height="41"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLABE: 123 344443 233443 323" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlK-xF-Uxh">
-                                                        <rect key="frame" x="8" y="101.5" width="398" height="20.5"/>
+                                                        <rect key="frame" x="8" y="101.5" width="418" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Referencia: *nombre del viaje" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obv-33-q51">
-                                                        <rect key="frame" x="8" y="130" width="398" height="20.5"/>
+                                                        <rect key="frame" x="8" y="130" width="418" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -699,28 +699,28 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wzf-MJ-ffg">
-                                                <rect key="frame" x="0.0" y="360" width="414" height="200"/>
+                                                <rect key="frame" x="0.0" y="360" width="434" height="200"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pago en efectivo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kz-Nl-Ay0">
-                                                        <rect key="frame" x="8" y="8" width="398" height="20.5"/>
+                                                        <rect key="frame" x="8" y="8" width="418" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dirígete a nuestras instalaciones en la Ciudad de México." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dY6-xJ-M8X">
-                                                        <rect key="frame" x="8" y="36.5" width="398" height="41"/>
+                                                        <rect key="frame" x="8" y="36.5" width="418" height="41"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dirección: Avenida Hidalgo 203, La Condesa, Ciudad de México" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bel-Fq-LMc">
-                                                        <rect key="frame" x="8" y="101.5" width="398" height="41"/>
+                                                        <rect key="frame" x="8" y="101.5" width="418" height="41"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teléfono: 555000400" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Cd-sF-lLL">
-                                                        <rect key="frame" x="8" y="150.5" width="398" height="20.5"/>
+                                                        <rect key="frame" x="8" y="150.5" width="418" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -745,7 +745,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKq-RS-jE3">
-                                                <rect key="frame" x="0.0" y="576" width="414" height="30"/>
+                                                <rect key="frame" x="0.0" y="576" width="434" height="30"/>
                                                 <state key="normal" title="Tomar foto"/>
                                                 <connections>
                                                     <action selector="takePhotoAction:" destination="81g-cQ-j6R" eventType="touchUpInside" id="WNV-Fo-Jcx"/>
@@ -772,13 +772,13 @@
                             <constraint firstItem="aFW-0J-kbW" firstAttribute="leading" secondItem="NgV-1J-jS8" secondAttribute="leading" id="0rS-l9-x5i"/>
                             <constraint firstItem="aFW-0J-kbW" firstAttribute="top" secondItem="nFb-M0-Y8E" secondAttribute="top" id="4Od-B1-YcH"/>
                             <constraint firstAttribute="bottom" secondItem="aFW-0J-kbW" secondAttribute="bottom" id="GMZ-vw-S4d"/>
-                            <constraint firstItem="aFW-0J-kbW" firstAttribute="trailing" secondItem="NgV-1J-jS8" secondAttribute="trailing" id="snm-ID-wcr"/>
+                            <constraint firstItem="aFW-0J-kbW" firstAttribute="trailing" secondItem="NgV-1J-jS8" secondAttribute="trailing" constant="20" id="snm-ID-wcr"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wnz-67-hgI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4832" y="315"/>
+            <point key="canvasLocation" x="5573.913043478261" y="314.73214285714283"/>
         </scene>
         <!--Ingresar-->
         <scene sceneID="74V-m9-Wdc">

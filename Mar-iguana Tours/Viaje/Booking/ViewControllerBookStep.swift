@@ -103,6 +103,10 @@ class ViewControllerBookStep: UIViewController {
         if let controllerToShow = getControllerToShow(from: stepView.selectedStep) {
             pageViewController.setViewControllers([controllerToShow], direction: .forward, animated: true, completion: nil)
         }
+        
+        if stepView.selectedStep == 4 {
+            nextButton.isHidden = true
+        }
     }
 
     @IBAction func backButtonDidPress(_ sender: Any) {
@@ -120,6 +124,8 @@ class ViewControllerBookStep: UIViewController {
             if let controllerToShow = getControllerToShow(from: stepView.selectedStep) {
                 pageViewController.setViewControllers([controllerToShow], direction: .reverse, animated: true, completion: nil)
             }
+            
+            nextButton.isHidden = false
         }
     }
 }
