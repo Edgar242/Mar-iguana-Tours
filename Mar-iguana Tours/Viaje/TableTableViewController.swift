@@ -57,7 +57,7 @@ class TableTableViewController: UITableViewController {
         monitor.start(queue: elKiu)
       
         //Navigation bar
-        navigationController?.navigationBar.barTintColor = ColorUtils.hexStringToUIColor(hex: "#39985E")
+        navigationController?.navigationBar.barTintColor = UIColor(named: "myPrimaryColor")
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
