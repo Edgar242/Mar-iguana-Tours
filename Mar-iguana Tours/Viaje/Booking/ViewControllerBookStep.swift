@@ -10,8 +10,8 @@ import StepView
 
 let pageTitles = ["Escoge tus asientos",
                   "Selecciona promoción",
-                  "Escoge medio de pago",
-                  "Sube tu comprobante",
+                  "Métodos de pago",
+                  "Confirmación de compra"
                 ]
 
 //Global variable with the selected tour
@@ -33,8 +33,8 @@ class ViewControllerBookStep: UIViewController {
         return [
             self.getViewController(withIdentifier: String.init(describing: ViewControllerStep1.self)),
             self.getViewController(withIdentifier: String.init(describing: ViewControllerStep2.self)),
-            self.getViewController(withIdentifier: String.init(describing: ViewControllerStep3.self)),
-            self.getViewController(withIdentifier: String.init(describing: ViewControllerStep4.self))
+            self.getViewController(withIdentifier: String.init(describing: ViewControllerStep4.self)),
+            self.getViewController(withIdentifier: String.init(describing: ViewControllerStep3.self))
         ]
     }()
     
