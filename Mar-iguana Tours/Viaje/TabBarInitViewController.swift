@@ -18,7 +18,6 @@ class TabBarInitViewController:UITabBarController {
     //Tab bar item
     override func viewDidLayoutSubviews() {
         tabBar.tintColor = ColorUtils.hexStringToUIColor(hex: "#39985E")
-        tabBar.barTintColor = UIColor.white
         super.viewDidLayoutSubviews()
     }
 
