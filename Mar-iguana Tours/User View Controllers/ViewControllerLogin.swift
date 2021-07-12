@@ -53,6 +53,9 @@ class ViewControllerLogin: UIViewController {
 
         setupElements()
 //        setupVideo()
+        
+        // Set Theme colors
+        Utilities.setMyThemeColors(navigationController: navigationController)
     }
     
     func setupElements() {

@@ -45,7 +45,9 @@ class ViewControllerProfile: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set theme colors
         FormatUtils.formatButtonEnabled(button: salirButton)
+        Utilities.setMyThemeColors(navigationController: navigationController)
         
         //Forma redondeada de imagen
         userPhoto.layer.cornerRadius = userPhoto.bounds.size.width/2.0

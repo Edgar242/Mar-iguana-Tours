@@ -882,7 +882,7 @@
             </objects>
             <point key="canvasLocation" x="2014" y="1081"/>
         </scene>
-        <!--View Controller Register-->
+        <!--Registrar-->
         <scene sceneID="MSp-MQ-4JG">
             <objects>
                 <viewController id="tSZ-b1-OHa" customClass="ViewControllerRegister" customModule="Mar_iguana_Tours" customModuleProvider="target" sceneMemberID="viewController">
@@ -1020,6 +1020,7 @@
                             <outletCollection property="gestureRecognizers" destination="uoi-7c-Qum" appends="YES" id="7of-DD-g93"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" title="Registrar" id="ZIv-Ma-9ci"/>
                     <connections>
                         <outlet property="apellidosTextField" destination="RU0-UF-gWs" id="hW2-FA-30u"/>
                         <outlet property="emailTextField" destination="Oty-t9-gym" id="Mu1-uf-IYg"/>
@@ -1377,7 +1378,7 @@ El usuario acepta recibir notificaciones de publicidad de viajes con ofertas y p
             <color red="0.23137254901960785" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="myPrimaryColor">
-            <color red="0.16862745098039217" green="0.57647058823529407" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.22352941176470589" green="0.59607843137254901" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="myWarningColor">
             <color red="1" green="0.83921568627450982" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
